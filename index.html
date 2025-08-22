@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARFLO SPA - Soluciones profesionales para la limpieza industrial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h2 class="nav__logo">ARFLO SPA</h2>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#inicio" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#productos" class="nav__link">Productos</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#equipos" class="nav__link">Equipos</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contacto" class="nav__link">Contacto</a>
+                </li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Soluciones Profesionales para la Limpieza Industrial</h1>
+                <p class="hero__description">
+                    En ARFLO nos especializamos en la venta de productos y equipos de limpieza industrial 
+                    de alta calidad. Ofrecemos soluciones integrales para mantener sus instalaciones en perfectas condiciones.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#productos" class="btn btn--primary">Ver Productos</a>
+                    <a href="#contacto" class="btn btn--outline">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="products">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Productos de Limpieza</h2>
+                <p class="section__description">
+                    Contamos con una amplia gama de productos químicos especializados para la limpieza industrial
+                </p>
+            </div>
+            <div class="products__grid">
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896707/pplx_project_search_images/f63cd6eeffa2c85605d21379281c2231820882b1.png" alt="Desengrasante Industrial Alcalino">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Desengrasante Industrial Alcalino</h3>
+                        <p class="product-card__description">Potente desengrasante para eliminación de aceites y grasas en superficies industriales</p>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Desengrasante Industrial Alcalino')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896706/pplx_project_search_images/e3d5d4de4b1ac5196395ae0c06b9a878acb8f866.png" alt="Detergente Biodegradable">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Detergente Biodegradable</h3>
+                        <p class="product-card__description">Detergente ecológico para limpieza general en ambientes industriales</p>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Detergente Biodegradable')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896705/pplx_project_search_images/c2724e0bb67287b0aef1eb9b8a3328476ff8745d.png" alt="Desincrustante Ácido">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Desincrustante Ácido</h3>
+                        <p class="product-card__description">Elimina incrustaciones de cal y minerales en tuberías y superficies</p>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Desincrustante Ácido')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896707/pplx_project_search_images/015e6cd0faa3320d2977fed37797703305ee21a8.png" alt="Desinfectante Industrial">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Desinfectante Industrial</h3>
+                        <p class="product-card__description">Desinfectante de amplio espectro para industria alimentaria y farmacéutica</p>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Desinfectante Industrial')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896707/pplx_project_search_images/051468676b5d6c46ca69682be98d2d32b4fb1918.png" alt="Limpiador Multiuso">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Limpiador Multiuso</h3>
+                        <p class="product-card__description">Limpiador versátil para múltiples superficies industriales</p>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Limpiador Multiuso')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896705/pplx_project_search_images/1af3002c83cfa98fe503cc0efd08db6bcfcfb797.png" alt="Abrillantador de Suelos">
+                    </div>
+                    <div class="product-card__content">
+                        <h3 class="product-card__title">Abrillantador de Suelos</h3>
+                        <p class="product-card__description">Producto especializado para el brillo y protección de suelos industriales</p>
+                        <div class="product-card__footer">
+                            <span class="product-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Abrillantador de Suelos')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipos Section -->
+    <section id="equipos" class="equipment">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Equipos de Limpieza</h2>
+                <p class="section__description">
+                    Equipos profesionales de última tecnología para optimizar sus procesos de limpieza industrial
+                </p>
+            </div>
+            <div class="equipment__grid">
+                <div class="equipment-card">
+                    <div class="equipment-card__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1755896706/pplx_project_search_images/3d65dc3215f36ffbe86760875565189703702905.png" alt="Aspiradora Industrial 70L">
+                    </div>
+                    <div class="equipment-card__content">
+                        <h3 class="equipment-card__title">Aspiradora Industrial 70L</h3>
+                        <p class="equipment-card__description">Aspiradora de alta potencia para sólidos y líquidos, tanque de 70 litros</p>
+                        <div class="equipment-card__footer">
+                            <span class="equipment-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Aspiradora Industrial 70L')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-card__image">
+                        <img src="https://via.placeholder.com/300x200/0066cc/ffffff?text=Hidrolavadora" alt="Hidrolavadora de Alta Presión">
+                    </div>
+                    <div class="equipment-card__content">
+                        <h3 class="equipment-card__title">Hidrolavadora de Alta Presión</h3>
+                        <p class="equipment-card__description">Equipo de limpieza a presión para eliminación de suciedad incrustada</p>
+                        <div class="equipment-card__footer">
+                            <span class="equipment-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Hidrolavadora de Alta Presión')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-card__image">
+                        <img src="https://via.placeholder.com/300x200/004499/ffffff?text=Fregadora" alt="Fregadora de Suelos">
+                    </div>
+                    <div class="equipment-card__content">
+                        <h3 class="equipment-card__title">Fregadora de Suelos</h3>
+                        <p class="equipment-card__description">Máquina fregadora para limpieza y secado automático de suelos</p>
+                        <div class="equipment-card__footer">
+                            <span class="equipment-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Fregadora de Suelos')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-card__image">
+                        <img src="https://via.placeholder.com/300x200/0066cc/ffffff?text=Barredora" alt="Barredora Industrial">
+                    </div>
+                    <div class="equipment-card__content">
+                        <h3 class="equipment-card__title">Barredora Industrial</h3>
+                        <p class="equipment-card__description">Barredora mecánica para grandes superficies industriales</p>
+                        <div class="equipment-card__footer">
+                            <span class="equipment-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Barredora Industrial')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-card__image">
+                        <img src="https://via.placeholder.com/300x200/004499/ffffff?text=Generador+Vapor" alt="Generador de Vapor">
+                    </div>
+                    <div class="equipment-card__content">
+                        <h3 class="equipment-card__title">Generador de Vapor</h3>
+                        <p class="equipment-card__description">Equipo de limpieza con vapor para desinfección profunda</p>
+                        <div class="equipment-card__footer">
+                            <span class="equipment-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Generador de Vapor')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="equipment-card">
+                    <div class="equipment-card__image">
+                        <img src="https://via.placeholder.com/300x200/0066cc/ffffff?text=Pulidora" alt="Pulidora de Pisos">
+                    </div>
+                    <div class="equipment-card__content">
+                        <h3 class="equipment-card__title">Pulidora de Pisos</h3>
+                        <p class="equipment-card__description">Máquina pulidora para mantenimiento y brillo de superficies</p>
+                        <div class="equipment-card__footer">
+                            <span class="equipment-card__price">Consultar</span>
+                            <button class="btn btn--sm btn--primary" onclick="openContactModal('Pulidora de Pisos')">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Contacto</h2>
+                <p class="section__description">
+                    ¿Necesita más información sobre nuestros productos? Contáctenos y le brindaremos asesoría personalizada
+                </p>
+            </div>
+            <div class="contact__content">
+                <div class="contact__form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product" class="form-label">Producto de interés</label>
+                            <input type="text" id="product" name="product" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="contact__info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact__item">
+                        <strong>Teléfono:</strong>
+                        <span>+56 9 33803047</span>
+                    </div>
+                    <div class="contact__item">
+                        <strong>Email:</strong>
+                        <span>Jarayah@Arflo.cl</span>
+                    </div>
+                    <div class="contact__item">
+                        <strong>Dirección:</strong>
+                        <span>José Ignacio Zenteno #779, Antofagasta, Chile</span>
+                    </div>
+                    <div class="contact__map">
+                        <div class="map-placeholder">
+                            <p>📍 Ubicación en Antofagasta, Chile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">CleanTech Industrial</h3>
+                    <p class="footer__description">
+                        Empresa especializada en la venta de productos y equipos de limpieza industrial de alta calidad
+                    </p>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Enlaces</h4>
+                    <ul class="footer__links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#equipos">Equipos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Contacto</h4>
+                    <p>+56 2 2345 6789</p>
+                    <p>contacto@cleantech.cl</p>
+                    <p>Av. Industrial 123, Santiago, Chile</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 CleanTech Industrial. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal hidden">
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3>Consultar Producto</h3>
+                <button class="modal__close" onclick="closeContactModal()">&times;</button>
+            </div>
+            <div class="modal__body">
+                <p>Complete el formulario de contacto para recibir información sobre este producto.</p>
+                <button class="btn btn--primary" onclick="scrollToContact()">Ir al Formulario</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
