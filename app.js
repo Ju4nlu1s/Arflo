@@ -421,7 +421,7 @@ function handleCheckout() {
     
     const message = `¡Hola! Me interesa realizar el siguiente pedido:\n\n${itemsList}\n\nTotal: $${total.toLocaleString('es-CL')} CLP\n\n¿Podrían confirmarme la disponibilidad y proceso de compra?`;
     
-    const phoneNumber = '56912345678';
+    const phoneNumber = '5693383047';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
