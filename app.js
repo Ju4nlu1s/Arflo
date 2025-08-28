@@ -16,7 +16,7 @@ const productosData = [
         precio: 15990,
         descripcion: "Limpiador alcalino concentrado desarrollado para remover suciedades pesadas presentes en diversas superficies. Es un producto con base acuosa y no inflamable.",
         imagen: "placeholder-producto2.png",
-        destacado: false
+        destacado: true
     },
     {
         id: 3,
