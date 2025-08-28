@@ -2,28 +2,28 @@
 const productosData = [
     {
         id: 1,
-        nombre: "Ecolab Solvent Degreaser NC",
+        nombre: "Ecolab Solvent Degreaser NC 20 lts",
         categoria: "Desengrasantes",
-        precio: 45000,
+        precio: 94990,
         descripcion: "Desengrasante industrial concentrado, libre de solventes clorados. Ideal para limpieza de maquinaria pesada.",
         imagen: "placeholder-producto1.jpg",
         destacado: true
     },
     {
         id: 2,
-        nombre: "Solvente Multiusos Industrial",
-        categoria: "Solventes",
-        precio: 32000,
-        descripcion: "Solvente de alta efectividad para remoción de grasa y aceites en aplicaciones industriales.",
+        nombre: "EOX Desengrasante de alto poder 5lts",
+        categoria: "Desengrasantes",
+        precio: 15990,
+        descripcion: "Limpiador alcalino concentrado desarrollado para remover suciedades pesadas presentes en diversas superficies. Es un producto con base acuosa y no inflamable.",
         imagen: "placeholder-producto2.jpg",
         destacado: false
     },
     {
         id: 3,
-        nombre: "Detergente Industrial HD-5000",
-        categoria: "Detergentes",
-        precio: 28000,
-        descripcion: "Detergente concentrado para limpieza profunda de superficies industriales y equipos.",
+        nombre: "Avalco Plus Detergente Desengrasante Alcalino Espumoso 20lts",
+        categoria: "Desengrasantes",
+        precio: 55990,
+        descripcion: "El detergente desengrasante alcalino espumoso 20 litros Avacal Plus es perfecto para remover grasas y suciedad difícil en la industria alimentaria, equipos y diversas superficies.",
         imagen: "placeholder-producto3.jpg",
         destacado: true
     },
