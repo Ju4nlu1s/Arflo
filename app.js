@@ -15,7 +15,7 @@ const productosData = [
         categoria: "Desengrasantes",
         precio: 15990,
         descripcion: "Limpiador alcalino concentrado desarrollado para remover suciedades pesadas presentes en diversas superficies. Es un producto con base acuosa y no inflamable.",
-        imagen: "placeholder-producto2.png",
+        imagen: "Eox2.png",
         destacado: true
     },
     {
@@ -24,7 +24,7 @@ const productosData = [
         categoria: "Desengrasantes",
         precio: 55990,
         descripcion: "El detergente desengrasante alcalino espumoso 20 litros Avacal Plus es perfecto para remover grasas y suciedad difícil en la industria alimentaria, equipos y diversas superficies.",
-        imagen: "placeholder-producto3.jpg",
+        imagen: "Avalco3.jpg",
         destacado: true
     },
     {
