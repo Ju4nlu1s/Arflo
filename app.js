@@ -496,7 +496,7 @@ function handleContactForm(e) {
     // Crear mensaje para WhatsApp
     const message = `Consulta desde sitio web:\n\nNombre: ${data.nombre}\nEmail: ${data.email}\nTeléfono: ${data.telefono}\n\nMensaje:\n${data.mensaje}`;
     
-    const phoneNumber = '56912345678';
+    const phoneNumber = '56933803047';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
     // Abrir WhatsApp
