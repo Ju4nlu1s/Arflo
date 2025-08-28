@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos y Equipos de Limpieza Industrial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        <i class="fas fa-industry"></i>
+                        <span>Limpieza Industrial</span>
+                    </div>
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                        <li><a href="#productos" class="nav-link">Productos</a></li>
+                        <li><a href="#equipos" class="nav-link">Equipos</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                        <li class="cart-nav">
+                            <button class="cart-btn" id="cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="cart-count" id="cart-count">0</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <button class="nav-toggle" id="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Página Principal -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Productos y Equipos de Limpieza Industrial</h1>
+                <p>Soluciones profesionales para la industria. Productos químicos especializados y equipos de alta calidad para todas tus necesidades de limpieza industrial.</p>
+                <div class="hero-buttons">
+                    <a href="#productos" class="btn btn--primary">Ver Productos</a>
+                    <a href="#equipos" class="btn btn--outline">Ver Equipos</a>
+                </div>
+            </div>
+        </div>
+        <!-- Franja publicitaria -->
+        <div class="promo-banner">
+            <div class="container">
+                <div class="promo-content">
+                    <i class="fas fa-star"></i>
+                    <span>¡Ofertas especiales en productos destacados!</span>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Destacados en Inicio -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>Productos Destacados</h2>
+            <div class="featured-grid" id="featured-products">
+                <!-- Se llenarán con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Productos -->
+    <section id="productos" class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h2>Catálogo de Productos</h2>
+                <div class="catalog-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar productos..." id="search-productos">
+                    </div>
+                    <select id="filter-productos" class="form-control">
+                        <option value="">Todas las categorías</option>
+                        <option value="Desengrasantes">Desengrasantes</option>
+                        <option value="Solventes">Solventes</option>
+                        <option value="Detergentes">Detergentes</option>
+                        <option value="Limpiadores">Limpiadores</option>
+                        <option value="Químicos">Químicos</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Franja publicitaria productos -->
+            <div class="promo-strip">
+                <div class="promo-content">
+                    <i class="fas fa-fire"></i>
+                    <span>¡Desengrasantes industriales con 15% de descuento!</span>
+                    <i class="fas fa-fire"></i>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productos-grid">
+                <!-- Se llenarán with JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Equipos -->
+    <section id="equipos" class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h2>Catálogo de Equipos</h2>
+                <div class="catalog-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar equipos..." id="search-equipos">
+                    </div>
+                    <select id="filter-equipos" class="form-control">
+                        <option value="">Todas las categorías</option>
+                        <option value="Aspiradoras">Aspiradoras</option>
+                        <option value="Bombas">Bombas</option>
+                        <option value="Limpieza">Limpieza</option>
+                        <option value="Herramientas">Herramientas</option>
+                        <option value="Protección">Protección</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Franja publicitaria equipos -->
+            <div class="promo-strip">
+                <div class="promo-content">
+                    <i class="fas fa-tools"></i>
+                    <span>¡Equipos Kärcher con garantía extendida!</span>
+                    <i class="fas fa-tools"></i>
+                </div>
+            </div>
+
+            <div class="products-grid" id="equipos-grid">
+                <!-- Se llenarán with JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+56 9 1234 5678</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contacto@limpiezaindustrial.cl</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Antofagasta, Chile</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Lunes a Viernes: 8:00 - 18:00<br>Sábados: 9:00 - 14:00</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h3>Envíanos tu consulta</h3>
+                    <div class="form-group">
+                        <label class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-control" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Enviar Consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito Modal -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Carrito de Compras</h3>
+                <button class="modal-close" id="close-cart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Se llenarán con JavaScript -->
+                </div>
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0</span> CLP</strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="continue-shopping">Seguir Comprando</button>
+                <button class="btn btn--primary" id="checkout-btn">Realizar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Productos y Equipos de Limpieza Industrial</h4>
+                    <p>Soluciones profesionales para la industria desde 2020</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#equipos">Equipos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>contacto@limpiezaindustrial.cl<br>+56 9 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Productos y Equipos de Limpieza Industrial. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
