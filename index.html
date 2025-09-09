@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="container">
@@ -21,6 +20,8 @@
                         <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                         <li><a href="#productos" class="nav-link">Productos</a></li>
                         <li><a href="#equipos" class="nav-link">Equipos</a></li>
+                        <li><a href="#automotriz" class="nav-link">Automotriz</a></li>
+                        <li><a href="#escolares" class="nav-link">Escolares</a></li>
                         <li><a href="#contacto" class="nav-link">Contacto</a></li>
                         <li class="cart-nav">
                             <button class="cart-btn" id="cart-btn">
@@ -37,7 +38,6 @@
         </nav>
     </header>
 
-    <!-- Página Principal -->
     <section id="inicio" class="hero">
         <div class="container">
             <div class="hero-content">
@@ -49,7 +49,6 @@
                 </div>
             </div>
         </div>
-        <!-- Franja publicitaria -->
         <div class="promo-banner">
             <div class="container">
                 <div class="promo-content">
@@ -61,17 +60,14 @@
         </div>
     </section>
 
-    <!-- Productos Destacados en Inicio -->
     <section class="featured-section">
         <div class="container">
             <h2>Productos Destacados</h2>
             <div class="featured-grid" id="featured-products">
-                <!-- Se llenarán con JavaScript -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Sección Productos -->
     <section id="productos" class="catalog-section">
         <div class="container">
             <div class="catalog-header">
@@ -92,7 +88,6 @@
                 </div>
             </div>
             
-            <!-- Franja publicitaria productos -->
             <div class="promo-strip">
                 <div class="promo-content">
                     <i class="fas fa-fire"></i>
@@ -102,12 +97,10 @@
             </div>
 
             <div class="products-grid" id="productos-grid">
-                <!-- Se llenarán with JavaScript -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Sección Equipos -->
     <section id="equipos" class="catalog-section">
         <div class="container">
             <div class="catalog-header">
@@ -128,7 +121,6 @@
                 </div>
             </div>
 
-            <!-- Franja publicitaria equipos -->
             <div class="promo-strip">
                 <div class="promo-content">
                     <i class="fas fa-tools"></i>
@@ -138,12 +130,40 @@
             </div>
 
             <div class="products-grid" id="equipos-grid">
-                <!-- Se llenarán with JavaScript -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Sección Contacto -->
+    <section id="automotriz" class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h2>Productos Automotrices</h2>
+                <div class="catalog-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar productos..." id="search-automotriz">
+                    </div>
+                    <select id="filter-automotriz" class="form-control">
+                        <option value="">Todas las categorías</option>
+                        <option value="Automotriz">Automotriz</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="automotriz-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="escolares" class="catalog-section">
+        <div class="container">
+            <h2>Listas Escolares</h2>
+            <p class="section-description">Simplifica la compra de útiles escolares con nuestra selección de productos esenciales.</p>
+            <ul class="listas-escolares-list" id="listas-escolares-list">
+                </ul>
+        </div>
+    </section>
+
+
     <section id="contacto" class="contact-section">
         <div class="container">
             <h2>Contacto</h2>
@@ -191,7 +211,6 @@
         </div>
     </section>
 
-    <!-- Carrito Modal -->
     <div id="cart-modal" class="modal hidden">
         <div class="modal-content">
             <div class="modal-header">
@@ -200,8 +219,7 @@
             </div>
             <div class="modal-body">
                 <div id="cart-items">
-                    <!-- Se llenarán con JavaScript -->
-                </div>
+                    </div>
                 <div class="cart-total">
                     <strong>Total: $<span id="cart-total">0</span> CLP</strong>
                 </div>
@@ -213,7 +231,6 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -226,6 +243,8 @@
                     <ul>
                         <li><a href="#productos">Productos</a></li>
                         <li><a href="#equipos">Equipos</a></li>
+                        <li><a href="#automotriz">Automotriz</a></li>
+                        <li><a href="#escolares">Escolares</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
