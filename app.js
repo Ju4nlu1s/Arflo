@@ -95,6 +95,160 @@ const equiposData = [
     }
 ];
 
+const productosAutomotrizData = [
+    {
+        id: 201,
+        nombre: "Shampoo Automotriz Espuma Alta Densidad EOX Active Foam",
+        presentacion: "5 litros",
+        precio: 31500,
+        descripcion: "Shampoo de alta densidad ideal para una limpieza profunda y segura de la carrocería del vehículo.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 202,
+        nombre: "Limpiador de Motor Engine Cleaner c/Gatillo EOX",
+        presentacion: "470 ml",
+        precio: 9345,
+        descripcion: "Limpiador especializado para motores que disuelve grasa, aceite y suciedad sin dañar componentes.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 203,
+        nombre: "Cera Líquida Spray EOX",
+        presentacion: "5 litros",
+        precio: 33600,
+        descripcion: "Cera en spray de fácil aplicación que proporciona un acabado brillante y protege la pintura.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 204,
+        nombre: "Aceite Penetrante EOX",
+        presentacion: "aerosol 300 ml",
+        precio: 7350,
+        descripcion: "Aceite lubricante y penetrante en aerosol que afloja piezas oxidadas y chirriantes.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 205,
+        nombre: "Desengrasante Alto Poder EOX (Industrial)",
+        presentacion: "5 litros",
+        precio: 13650,
+        descripcion: "Desengrasante de alta concentración para eliminar suciedad pesada en motores y chasis.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 206,
+        nombre: "Limpiador de Llantas EOX | Rim Cleaner",
+        presentacion: "botella 470 ml",
+        precio: 7875,
+        descripcion: "Limpiador específico para llantas que remueve eficazmente el polvo de frenos y la suciedad incrustada.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 207,
+        nombre: "Limpiador Multipropósito EOX",
+        presentacion: "bidón 5 litros",
+        precio: 17850,
+        descripcion: "Limpiador versátil para múltiples superficies del automóvil, desde interiores hasta exteriores.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 208,
+        nombre: "Eliminador de Olores EOX (Odor Eliminator New Car)",
+        presentacion: "470 ml",
+        precio: 4935,
+        descripcion: "Fórmula avanzada que elimina malos olores y deja un agradable aroma a 'auto nuevo'.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 209,
+        nombre: "Refrigerante Anticongelante ELC EOX",
+        presentacion: "bidón 20 litros",
+        precio: 40530,
+        descripcion: "Refrigerante de larga duración (ELC) que protege el motor contra la corrosión y el sobrecalentamiento.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 210,
+        nombre: "Desoxidante EOX (Anti-Rust Spray)",
+        presentacion: "300 ml",
+        precio: 2730,
+        descripcion: "Spray desoxidante que penetra y disuelve el óxido, facilitando el desmontaje de piezas.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 211,
+        nombre: "Solvente Dieléctrico 40 NC EOX",
+        presentacion: "bidón 5 litros",
+        precio: 36750,
+        descripcion: "Solvente dieléctrico no conductor, seguro para la limpieza de componentes eléctricos y electrónicos.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 212,
+        nombre: "Shampoo Automotriz Prelavado Alcalino EOX",
+        presentacion: "5 litros",
+        precio: 29400,
+        descripcion: "Shampoo alcalino de prelavado, ideal para remover suciedad pesada antes del lavado manual.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 213,
+        nombre: "Desodorante Ambiental EOX (Automotriz)",
+        presentacion: "5 litros",
+        precio: 25200,
+        descripcion: "Aromatizante líquido para el ambiente interior del vehículo con fragancia fresca y duradera.",
+        categoria: "Automotriz"
+    },
+    {
+        id: 214,
+        nombre: "Cera Alta Presión EOX (Autosecante)",
+        presentacion: "bidón 22 litros",
+        precio: 178500,
+        descripcion: "Cera autosecante para equipos de lavado automático de alta presión que deja la carrocería seca y brillante.",
+        categoria: "Automotriz"
+    }
+];
+
+const listasEscolaresData = [
+    {
+        id: 301,
+        nombre: "Lápiz de Grafito HB",
+        descripcion: "Lápiz de grafito de alta calidad, ideal para escritura y dibujo técnico.",
+        precio: 500,
+        categoria: "Escolar"
+    },
+    {
+        id: 302,
+        nombre: "Cuaderno de Tapa Dura",
+        descripcion: "Cuaderno de 100 hojas, tamaño A4, con tapa dura para mayor durabilidad.",
+        precio: 2500,
+        categoria: "Escolar"
+    },
+    {
+        id: 303,
+        nombre: "Set de Lápices de Colores",
+        descripcion: "Set de 12 lápices de colores con punta resistente, colores vivos y brillantes.",
+        precio: 4000,
+        categoria: "Escolar"
+    },
+    {
+        id: 304,
+        nombre: "Estuche de Geometría",
+        descripcion: "Incluye regla, escuadra, transportador y compás. Ideal para clases de matemáticas.",
+        precio: 3500,
+        categoria: "Escolar"
+    },
+    {
+        id: 305,
+        nombre: "Mochila Ergonómica",
+        descripcion: "Mochila con diseño ergonómico y compartimentos múltiples para organizar los útiles.",
+        precio: 25000,
+        categoria: "Escolar"
+    }
+];
+
+
 // Estado de la aplicación
 let carrito = [];
 
@@ -108,6 +262,8 @@ function initApp() {
     renderFeaturedProducts();
     renderProductos();
     renderEquipos();
+    renderProductosAutomotriz();
+    renderListasEscolares();
     setupEventListeners();
     updateCartDisplay();
 }
@@ -162,11 +318,15 @@ function setupEventListeners() {
     const filterProductos = document.getElementById('filter-productos');
     const searchEquipos = document.getElementById('search-equipos');
     const filterEquipos = document.getElementById('filter-equipos');
-    
-    if (searchProductos) searchProductos.addEventListener('input', filterProductos);
-    if (filterProductos) filterProductos.addEventListener('change', filterProductos);
-    if (searchEquipos) searchEquipos.addEventListener('input', filterEquipos);
-    if (filterEquipos) filterEquipos.addEventListener('change', filterEquipos);
+    const searchAutomotriz = document.getElementById('search-automotriz');
+    const filterAutomotriz = document.getElementById('filter-automotriz');
+
+    if (searchProductos) searchProductos.addEventListener('input', filterProductosFunc);
+    if (filterProductos) filterProductos.addEventListener('change', filterProductosFunc);
+    if (searchEquipos) searchEquipos.addEventListener('input', filterEquiposFunc);
+    if (filterEquipos) filterEquipos.addEventListener('change', filterEquiposFunc);
+    if (searchAutomotriz) searchAutomotriz.addEventListener('input', filterAutomotrizFunc);
+    if (filterAutomotriz) filterAutomotriz.addEventListener('change', filterAutomotrizFunc);
 
     // Formulario de contacto
     const contactForm = document.getElementById('contact-form');
@@ -219,7 +379,7 @@ function renderFeaturedProducts() {
     const featuredContainer = document.getElementById('featured-products');
     if (!featuredContainer) return;
     
-    const allItems = [...productosData, ...equiposData];
+    const allItems = [...productosData, ...equiposData, ...productosAutomotrizData];
     const featuredItems = allItems.filter(item => item.destacado);
     
     featuredContainer.innerHTML = featuredItems.map(item => createProductCard(item)).join('');
@@ -239,8 +399,22 @@ function renderEquipos() {
     equiposContainer.innerHTML = equiposData.map(equipo => createProductCard(equipo)).join('');
 }
 
+function renderProductosAutomotriz() {
+    const automotrizContainer = document.getElementById('automotriz-grid');
+    if (!automotrizContainer) return;
+
+    automotrizContainer.innerHTML = productosAutomotrizData.map(item => createProductCard(item)).join('');
+}
+
+function renderListasEscolares() {
+    const escolaresContainer = document.getElementById('listas-escolares-list');
+    if (!escolaresContainer) return;
+    
+    escolaresContainer.innerHTML = listasEscolaresData.map(item => createListItem(item)).join('');
+}
+
 function createProductCard(item) {
-    const iconClass = item.id > 100 ? 'fas fa-tools' : 'fas fa-flask';
+    const iconClass = item.id > 200 ? 'fas fa-car-side' : (item.id > 100 ? 'fas fa-tools' : 'fas fa-flask');
     
     return `
         <div class="product-card ${item.destacado ? 'featured' : ''}">
@@ -262,8 +436,25 @@ function createProductCard(item) {
     `;
 }
 
+function createListItem(item) {
+    return `
+        <li class="list-item card">
+            <div class="card__body">
+                <div class="list-item-content">
+                    <h4 class="list-item-name">${item.nombre}</h4>
+                    <p class="list-item-description">${item.descripcion}</p>
+                </div>
+                <div class="list-item-price">$${item.precio.toLocaleString('es-CL')}</div>
+                <button class="add-to-cart btn btn--primary" onclick="addToCart(${item.id})">
+                    <i class="fas fa-cart-plus"></i>
+                </button>
+            </div>
+        </li>
+    `;
+}
+
 // Filtros y búsqueda
-function filterProductos() {
+function filterProductosFunc() {
     const searchInput = document.getElementById('search-productos');
     const filterSelect = document.getElementById('filter-productos');
     
@@ -285,7 +476,7 @@ function filterProductos() {
     }
 }
 
-function filterEquipos() {
+function filterEquiposFunc() {
     const searchInput = document.getElementById('search-equipos');
     const filterSelect = document.getElementById('filter-equipos');
     
@@ -307,9 +498,32 @@ function filterEquipos() {
     }
 }
 
+function filterAutomotrizFunc() {
+    const searchInput = document.getElementById('search-automotriz');
+    const filterSelect = document.getElementById('filter-automotriz');
+
+    if (!searchInput || !filterSelect) return;
+    
+    const searchTerm = searchInput.value.toLowerCase();
+    const categoryFilter = filterSelect.value;
+
+    const filteredAutomotriz = productosAutomotrizData.filter(item => {
+        const matchesSearch = item.nombre.toLowerCase().includes(searchTerm) ||
+                              item.descripcion.toLowerCase().includes(searchTerm) ||
+                              item.presentacion.toLowerCase().includes(searchTerm);
+        const matchesCategory = !categoryFilter || item.categoria === categoryFilter;
+        return matchesSearch && matchesCategory;
+    });
+
+    const automotrizContainer = document.getElementById('automotriz-grid');
+    if (automotrizContainer) {
+        automotrizContainer.innerHTML = filteredAutomotriz.map(item => createProductCard(item)).join('');
+    }
+}
+
 // Carrito de compras
 function addToCart(itemId) {
-    const allItems = [...productosData, ...equiposData];
+    const allItems = [...productosData, ...equiposData, ...productosAutomotrizData, ...listasEscolaresData];
     const item = allItems.find(product => product.id == itemId);
     
     if (!item) return;
@@ -544,3 +758,6 @@ function showContactConfirmation() {
 window.addToCart = addToCart;
 window.removeFromCart = removeFromCart;
 window.updateQuantity = updateQuantity;
+window.filterProductosFunc = filterProductosFunc;
+window.filterEquiposFunc = filterEquiposFunc;
+window.filterAutomotrizFunc = filterAutomotrizFunc;
