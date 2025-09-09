@@ -912,6 +912,13 @@ select.form-control {
   color: var(--color-primary);
 }
 
+.section-description {
+    text-align: center;
+    max-width: 600px;
+    margin: -16px auto 32px auto;
+    color: var(--color-text-secondary);
+}
+
 /* Secciones */
 .featured-section,
 .catalog-section,
@@ -1068,6 +1075,44 @@ select.form-control {
 
 .add-to-cart:hover {
   background: var(--color-primary-hover);
+}
+
+/* Listas escolares */
+.listas-escolares-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    display: grid;
+    gap: var(--space-16);
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-item-content {
+    flex: 1;
+    margin-right: var(--space-16);
+}
+
+.list-item-name {
+    margin-bottom: var(--space-4);
+}
+
+.list-item-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: 0;
+}
+
+.list-item-price {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+    flex-shrink: 0;
 }
 
 /* Sección de contacto */
@@ -1353,5 +1398,20 @@ select.form-control {
 
   .modal-footer {
     flex-direction: column;
+  }
+  
+  .list-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-item-content {
+    margin-right: 0;
+    margin-bottom: var(--space-8);
+  }
+
+  .list-item-price {
+    align-self: flex-end;
+    margin-bottom: var(--space-8);
   }
 }
