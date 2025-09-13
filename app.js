@@ -1,0 +1,232 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- DATOS DE LA APLICACIÓN (Basado en el Catálogo PDF) ---
+    const WHATSAPP_NUMBER = '56933803047'; // Número de teléfono para WhatsApp
+
+    // Insumos con precio visible y opción de compra
+    const insumosData = [
+        { id: 1, nombre: "Gorro desechable tipo clip", desc: "Paquete de 100 unidades.", precio: 3300, imagen: '7.png', categoria: "Desechables" },
+        { id: 2, nombre: "Mascarillas Techdent 3 pliegues", desc: "Caja de 50 unidades.", precio: 1980, imagen: '9.png', categoria: "Desechables" },
+        { id: 3, nombre: "Cubre Calzado", desc: "Paquete de 50 unidades.", precio: 2750, imagen: '3.png', categoria: "Desechables" },
+        { id: 4, nombre: "Alcohol Desnaturalizado 1L", desc: "Marca Dilem Pharme.", precio: 4190, imagen: '8.png', categoria: "Químicos" },
+        { id: 5, nombre: "Guantes Industriales Nitrilo Verde", desc: "Marca Adicare, No. 8.", precio: 2650, imagen: '6.png', categoria: "Guantes" },
+        { id: 6, nombre: "Alcohol Isopropílico", desc: "Formato de 1 litro.", precio: 6850, imagen: '2.png', categoria: "Químicos" },
+        { id: 7, nombre: "Guantes de Nitrilo S/P", desc: "Talla M, caja de 100U.", precio: 4690, imagen: '4.png', categoria: "Guantes" },
+        { id: 8, nombre: "Guantes de Vinilo S/P", desc: "Talla M, caja de 100U.", precio: 3790, imagen: '4.png', categoria: "Guantes" },
+        { id: 9, nombre: "Toalla Elite Evolution Autocorte", desc: "2 rollos de 250 metros c/u.", precio: 22590, imagen: '5.png', categoria: "Papelería" },
+        { id: 10, nombre: "Toalla Papel Tecnoroll H/S", desc: "2 rollos de 280 metros c/u.", precio: 12590, imagen: '1.png', categoria: "Papelería" }
+    ];
+
+    // Productos Químicos sin precio (para consultar)
+    const productosQuimicosData = [
+        { id: 101, nombre: "Shampoo Automotriz EOX Active Foam", desc: "Espuma de alta densidad para lavado vehicular.", imagen: null },
+        { id: 102, nombre: "Limpiador de Motor EOX", desc: "Engine cleaner con gatillo, alta eficacia.", imagen: null },
+        { id: 103, nombre: "Desengrasante Alto Poder EOX", desc: "Solución industrial para grasas pesadas.", imagen: null },
+        { id: 104, nombre: "Solvente Dieléctrico EOX", desc: "Limpieza segura para componentes eléctricos.", imagen: null },
+        { id: 105, nombre: "Desoxidante EOX Anti-Rust Spray", desc: "Protección y eliminación de óxido en metales.", imagen: null },
+        { id: 106, nombre: "Limpiador Multipropósito EOX", desc: "Fórmula versátil para diversas superficies.", imagen: null },
+    ];
+
+    // Equipos sin precio (para consultar)
+    const equiposData = [
+        { id: 201, nombre: "Hidrolavadoras Luster", desc: "Equipos de alta presión para limpieza profunda.", imagen: null },
+        { id: 202, nombre: "Aspiradoras Industriales Luster", desc: "Modelos para sólidos y líquidos.", imagen: null },
+        { id: 203, nombre: "Abrillantadoras Luster", desc: "Para mantenimiento y brillo de pisos.", imagen: null },
+        { id: 204, nombre: "Lava Alfombras y Tapiz Luster", desc: "Limpieza profesional de textiles.", imagen: null },
+        { id: 205, nombre: "Barredoras Industriales Luster", desc: "Soluciones para grandes superficies.", imagen: null },
+        { id: 206, nombre: "Carros y Utensilios de limpieza", desc: "Complementos para un trabajo eficiente.", imagen: null },
+    ];
+    
+    // --- ESTADO DE LA APLICACIÓN ---
+    let carrito = JSON.parse(localStorage.getItem('arfloCarrito')) || [];
+
+    // --- FUNCIONES DE RENDERIZADO ---
+    const renderGrids = () => {
+        const insumosGrid = document.getElementById('insumos-grid');
+        const productosGrid = document.getElementById('productos-grid');
+        const equiposGrid = document.getElementById('equipos-grid');
+
+        if(insumosGrid) insumosGrid.innerHTML = insumosData.map(p => createCard(p, true)).join('');
+        if(productosGrid) productosGrid.innerHTML = productosQuimicosData.map(p => createCard(p, false)).join('');
+        if(equiposGrid) equiposGrid.innerHTML = equiposData.map(p => createCard(p, false)).join('');
+    };
+
+    const createCard = (item, hasPrice) => {
+        const imageContent = item.imagen
+            ? `<img src="images/${item.imagen}" alt="${item.nombre}">`
+            : `<div class="placeholder-icon"><i class="fas fa-box"></i></div>`;
+
+        const footerContent = hasPrice
+            ? ` <div class="product-price">$${item.precio.toLocaleString('es-CL')}</div>
+                <button class="btn btn--primary" onclick="app.addToCart(${item.id})">Añadir</button>`
+            : ` <button class="btn btn--outline" onclick="app.consultarProducto(${item.id})">Consultar</button>`;
+
+        return `
+            <div class="product-card">
+                <div class="product-image">${imageContent}</div>
+                <div class="product-info">
+                    <h4 class="product-name">${item.nombre}</h4>
+                    <p class="product-desc">${item.desc}</p>
+                    <div class="product-footer">${footerContent}</div>
+                </div>
+            </div>`;
+    };
+
+    // --- LÓGICA DEL CARRITO ---
+    const addToCart = (id) => {
+        const item = insumosData.find(p => p.id === id);
+        const itemInCart = carrito.find(p => p.id === id);
+        if (itemInCart) {
+            itemInCart.cantidad++;
+        } else {
+            carrito.push({ ...item, cantidad: 1 });
+        }
+        updateCart();
+        showFeedback('¡Producto añadido al carrito!');
+    };
+
+    const updateCart = () => {
+        localStorage.setItem('arfloCarrito', JSON.stringify(carrito));
+        updateCartCount();
+        renderCartItems();
+    };
+
+    const updateCartCount = () => {
+        const cartCount = document.getElementById('cart-count');
+        const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        cartCount.textContent = totalItems;
+        cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+    };
+
+    const renderCartItems = () => {
+        const cartContainer = document.getElementById('cart-items-container');
+        if (carrito.length === 0) {
+            cartContainer.innerHTML = '<p class="empty-cart-msg">Tu carrito de cotización está vacío.</p>';
+            return;
+        }
+
+        let total = 0;
+        const itemsHtml = carrito.map(item => {
+            total += item.precio * item.cantidad;
+            return `
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.nombre}</div>
+                        <div class="cart-item-price">$${(item.precio * item.cantidad).toLocaleString('es-CL')}</div>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="app.updateQuantity(${item.id}, -1)">-</button>
+                        <span>${item.cantidad}</span>
+                        <button class="quantity-btn" onclick="app.updateQuantity(${item.id}, 1)">+</button>
+                    </div>
+                    <button class="remove-item-btn" onclick="app.removeFromCart(${item.id})"><i class="fas fa-trash"></i></button>
+                </div>`;
+        }).join('');
+
+        cartContainer.innerHTML = `${itemsHtml}<div class="cart-total">Total: $${total.toLocaleString('es-CL')}</div>`;
+    };
+    
+    const updateQuantity = (id, change) => {
+        const itemInCart = carrito.find(p => p.id === id);
+        if (itemInCart) {
+            itemInCart.cantidad += change;
+            if (itemInCart.cantidad <= 0) {
+                removeFromCart(id);
+            } else {
+                updateCart();
+            }
+        }
+    };
+    
+    const removeFromCart = (id) => {
+        carrito = carrito.filter(item => item.id !== id);
+        updateCart();
+    };
+
+    const handleCheckout = () => {
+        if (carrito.length === 0) return;
+        const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+        const itemsList = carrito.map(item => `• ${item.nombre} (x${item.cantidad})`).join('\n');
+        const message = `¡Hola ARFLO! Quisiera cotizar los siguientes insumos:\n\n${itemsList}\n\n*Total referencial: $${total.toLocaleString('es-CL')}*`;
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+    };
+
+    // --- LÓGICA DE CONSULTAS ---
+    const consultarProducto = (id) => {
+        const allProducts = [...productosQuimicosData, ...equiposData];
+        const item = allProducts.find(p => p.id === id);
+        if (item) {
+            const message = `¡Hola ARFLO! Me gustaría consultar por el siguiente producto: *${item.nombre}*.`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    };
+
+    const handleContactForm = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const nombre = formData.get('nombre');
+        const email = formData.get('email');
+        const mensaje = formData.get('mensaje');
+        const message = `Consulta desde la web:\n\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Mensaje:* ${mensaje}`;
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        e.target.reset();
+    };
+
+    // --- UI y EVENTOS ---
+    const setupEventListeners = () => {
+        // Menú móvil
+        document.getElementById('nav-toggle').addEventListener('click', () => {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+        
+        // Modal del carrito
+        const cartModal = document.getElementById('cart-modal');
+        document.getElementById('cart-btn').addEventListener('click', () => cartModal.classList.remove('hidden'));
+        document.getElementById('close-cart').addEventListener('click', () => cartModal.classList.add('hidden'));
+        document.getElementById('continue-shopping').addEventListener('click', () => cartModal.classList.add('hidden'));
+        document.getElementById('checkout-btn').addEventListener('click', handleCheckout);
+
+        // Formulario de contacto
+        document.getElementById('contact-form').addEventListener('submit', handleContactForm);
+        
+        // Scroll suave y navegación activa
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+    };
+
+    const showFeedback = (message) => {
+        const feedback = document.createElement('div');
+        feedback.textContent = message;
+        feedback.style.cssText = `position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--color-success); color: white; padding: 12px 24px; border-radius: 8px; z-index: 1001; opacity: 0; transition: opacity 0.3s;`;
+        document.body.appendChild(feedback);
+        setTimeout(() => feedback.style.opacity = '1', 10);
+        setTimeout(() => {
+            feedback.style.opacity = '0';
+            setTimeout(() => feedback.remove(), 300);
+        }, 2500);
+    };
+
+    // --- INICIALIZACIÓN ---
+    const init = () => {
+        renderGrids();
+        setupEventListeners();
+        updateCartCount();
+    };
+
+    init();
+
+    // Exponer funciones al objeto global 'app' para usarlas en el HTML (onclick)
+    window.app = {
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        consultarProducto,
+    };
+});

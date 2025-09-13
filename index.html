@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARFLO | Insumos y Soluciones Industriales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+        <a href="#inicio" class="logo">
+            <img src="images/LogoArflo.jpg" alt="">
+        </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#insumos" class="nav-link">Insumos</a></li>
+                <li><a href="#productos" class="nav-link">Productos Químicos</a></li>
+                <li><a href="#equipos" class="nav-link">Equipos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-btn" aria-label="Abrir carrito de compras">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <h1>Insumos y Soluciones para la Industria</h1>
+                <p>Calidad y eficiencia en productos de higiene, químicos y equipos especializados para el sector industrial.</p>
+                <div class="hero-buttons">
+                    <a href="#insumos" class="btn btn--primary">Ver Insumos</a>
+                    <a href="#productos" class="btn btn--outline">Consultar Productos</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="promo-banner">
+            <div class="container promo-content">
+                <i class="fas fa-tags"></i>
+                <span>¡Ofertas especiales en insumos de alta rotación! Consulte por volumen.</span>
+                <i class="fas fa-tags"></i>
+            </div>
+        </div>
+
+        <section id="insumos" class="catalog-section">
+            <div class="container">
+                <h2 class="section-title">Insumos de Higiene y Papelería</h2>
+                <div class="products-grid" id="insumos-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="productos" class="catalog-section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Productos Químicos EOX</h2>
+                <p class="section-subtitle">Soluciones de limpieza y mantenimiento de alto poder. Contáctanos para cotizar.</p>
+                <div class="products-grid" id="productos-grid">
+                    </div>
+            </div>
+        </section>
+        
+        <section id="equipos" class="catalog-section">
+            <div class="container">
+                <h2 class="section-title">Equipos de Limpieza LUSTER</h2>
+                <p class="section-subtitle">Equipamiento industrial para resultados profesionales. Consulta por el modelo que necesitas.</p>
+                <div class="products-grid" id="equipos-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section alternate-bg">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <p>¿Necesitas una cotización o tienes alguna duda? ¡Contáctanos!</p>
+                        <div class="contact-item"><i class="fas fa-user"></i><span>Juan Araya H. / Valentina Flores L.</span></div>
+                        <div class="contact-item"><i class="fab fa-whatsapp"></i><span>+56 9 3380 3047</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span>jarayah@arflo.cl / vflores@arflo.cl</span></div>
+                        <div class="contact-item"><i class="fas fa-clock"></i><span>Lunes a Viernes: 8:00 - 18:00</span></div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <h3>Envíanos un Mensaje</h3>
+                        <div class="form-group"><input type="text" class="form-control" name="nombre" placeholder="Nombre completo" required></div>
+                        <div class="form-group"><input type="email" class="form-control" name="email" placeholder="Email" required></div>
+                        <div class="form-group"><textarea class="form-control" name="mensaje" rows="4" placeholder="Tu mensaje o consulta..." required></textarea></div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Enviar por WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Carrito de Compras</h3>
+                <button class="modal-close" id="close-cart">&times;</button>
+            </div>
+            <div class="modal-body" id="cart-items-container">
+                </div>
+            <div class="modal-footer">
+                <button class="btn btn--outline" id="continue-shopping">Seguir Comprando</button>
+                <button class="btn btn--primary" id="checkout-btn">Cotizar Pedido por WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ARFLO. Todos los derechos reservados.</p>
+            <p>La mejor calidad del mercado la encuentras aquí.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
