@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Productos Químicos sin precio (para consultar)
     const productosQuimicosData = [
-        { id: 101, nombre: "Shampoo Automotriz EOX Active Foam", desc: "Espuma de alta densidad para lavado vehicular.", imagen: null },
-        { id: 102, nombre: "Limpiador de Motor EOX", desc: "Engine cleaner con gatillo, alta eficacia.", imagen: null },
-        { id: 103, nombre: "Desengrasante Alto Poder EOX", desc: "Solución industrial para grasas pesadas.", imagen: null },
-        { id: 104, nombre: "Solvente Dieléctrico EOX", desc: "Limpieza segura para componentes eléctricos.", imagen: null },
-        { id: 105, nombre: "Desoxidante EOX Anti-Rust Spray", desc: "Protección y eliminación de óxido en metales.", imagen: null },
-        { id: 106, nombre: "Limpiador Multipropósito EOX", desc: "Fórmula versátil para diversas superficies.", imagen: null },
+        { id: 101, nombre: "Shampoo Automotriz", desc: "Espuma de alta densidad para lavado vehicular.", imagen: '12.png' },
+        { id: 102, nombre: "Limpiador de Motor", desc: "Engine cleaner con gatillo, alta eficacia.", imagen: '11.png' },
+        { id: 103, nombre: "Desengrasante", desc: "Solución industrial para grasas pesadas.", imagen: '10.png' },
+        { id: 104, nombre: "Solvente Dieléctrico", desc: "Limpieza segura para componentes eléctricos.", imagen: '10.png' },
+        { id: 105, nombre: "Desoxidante Spray", desc: "Protección y eliminación de óxido en metales.", imagen: '13.png' },
+        { id: 106, nombre: "Limpiador Multipropósito", desc: "Fórmula versátil para diversas superficies.", imagen: '11.png' },
     ];
 
     // Equipos sin precio (para consultar)
