@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Equipos sin precio (para consultar)
     const equiposData = [
-        { id: 201, nombre: "Hidrolavadoras Luster", desc: "Equipos de alta presión para limpieza profunda.", imagen: null },
-        { id: 202, nombre: "Aspiradoras Industriales Luster", desc: "Modelos para sólidos y líquidos.", imagen: null },
-        { id: 203, nombre: "Abrillantadoras Luster", desc: "Para mantenimiento y brillo de pisos.", imagen: null },
-        { id: 204, nombre: "Lava Alfombras y Tapiz Luster", desc: "Limpieza profesional de textiles.", imagen: null },
-        { id: 205, nombre: "Barredoras Industriales Luster", desc: "Soluciones para grandes superficies.", imagen: null },
+        { id: 201, nombre: "Hidrolavadoras ", desc: "Equipos de alta presión para limpieza profunda.", imagen: null },
+        { id: 202, nombre: "Aspiradoras Industriales ", desc: "Modelos para sólidos y líquidos.", imagen: null },
+        { id: 203, nombre: "Abrillantadoras ", desc: "Para mantenimiento y brillo de pisos.", imagen: null },
+        { id: 204, nombre: "Lava Alfombras y Tapiz ", desc: "Limpieza profesional de textiles.", imagen: null },
+        { id: 205, nombre: "Barredoras Industriales ", desc: "Soluciones para grandes superficies.", imagen: null },
         { id: 206, nombre: "Carros y Utensilios de limpieza", desc: "Complementos para un trabajo eficiente.", imagen: null },
     ];
     
