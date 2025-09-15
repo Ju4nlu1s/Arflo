@@ -29,12 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Equipos sin precio (para consultar)
     const equiposData = [
-        { id: 201, nombre: "Hidrolavadoras ", desc: "Equipos de alta presión para limpieza profunda.", imagen: null },
-        { id: 202, nombre: "Aspiradoras Industriales ", desc: "Modelos para sólidos y líquidos.", imagen: null },
-        { id: 203, nombre: "Abrillantadoras ", desc: "Para mantenimiento y brillo de pisos.", imagen: null },
-        { id: 204, nombre: "Lava Alfombras y Tapiz ", desc: "Limpieza profesional de textiles.", imagen: null },
-        { id: 205, nombre: "Barredoras Industriales ", desc: "Soluciones para grandes superficies.", imagen: null },
-        { id: 206, nombre: "Carros y Utensilios de limpieza", desc: "Complementos para un trabajo eficiente.", imagen: null },
+        { id: 201, nombre: "Hidrolavadoras ", desc: "Equipos de alta presión para limpieza profunda.", imagen: '16.png' },
+        { id: 202, nombre: "Aspiradoras Industriales ", desc: "Modelos para sólidos y líquidos.", imagen: '20.png' },
+        { id: 203, nombre: "Abrillantadoras ", desc: "Para mantenimiento y brillo de pisos.", imagen: '17.png' },
+        { id: 204, nombre: "Barredoras Industriales ", desc: "Soluciones para grandes superficies.", imagen: '18.png' },
+        { id: 205, nombre: "Carros y Utensilios de limpieza", desc: "Complementos para un trabajo eficiente.", imagen: '19.png' },
     ];
     
     // --- ESTADO DE LA APLICACIÓN ---
