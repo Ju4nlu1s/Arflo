@@ -101,7 +101,7 @@ a { color: var(--color-primary); text-decoration: none; }
 .cart-count { position: absolute; top: -5px; right: -10px; background: var(--color-primary); color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; font-weight: bold; display: flex; align-items: center; justify-content: center; }
 .nav-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; }
 .logo img {
-    height: 85px; /* Puedes ajustar este valor */
+    height: 63px; /* Puedes ajustar este valor */
     width: auto;
 }
 /* --- SECCIONES --- */
