@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 8, nombre: "Guantes de Vinilo S/P", desc: "Talla M, caja de 100U.", precio: 3790, imagen: '4.png', categoria: "Guantes" },
         { id: 9, nombre: "Toalla Elite Evolution Autocorte", desc: "2 rollos de 250 metros c/u.", precio: 22590, imagen: '5.png', categoria: "Papelería" },
         { id: 10, nombre: "Toalla Papel Tecnoroll H/S", desc: "2 rollos de 280 metros c/u.", precio: 12590, imagen: '1.png', categoria: "Papelería" }
+        { id: 11, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" }
     ];
 
     // Productos Químicos sin precio (para consultar)
