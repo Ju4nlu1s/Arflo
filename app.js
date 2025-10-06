@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Insumos con precio visible y opción de compra
     const insumosData = [
-        { id: 1, nombre: "Desengrasante de alto poder", desc: "Marca EOX. Solución industrial para grasas pesadas.", precio: 13500, imagen: '20.png', categoria: "Quimicos" },
+        { id: 1, nombre: "Desengrasante de alto poder", desc: "Marca EOX. Solución industrial para grasas pesadas.", precio: 13500, imagen: '27.png', categoria: "Quimicos" },
         { id: 2, nombre: "Grasa Líquida Adhesiva", desc: "Marca EOX. Agente lubricante universal para piezas que se encuentran bajo alta presion.", precio: 11500, imagen: '21.png', categoria: "Quimicos" },
         { id: 3, nombre: "Desoxidante", desc: "Marca EOX. Producto de uso multiple que desprende de manera rapida el oxido fuertemente adherido.", precio: 4300, imagen: '22.png', categoria: "Quimicos" },
         { id: 4, nombre: "Solvente Dielectrico 40NC 5L", desc: "Marca EOX. producto que remueve grasas, aceites y suciedades pesadas sin dejar residuos y con una rápida tasa de secado. Está formulado en base a solventes libres de cloro flúor carbono (CFC) con el propósito de proteger el medio ambiente.", precio: 32450, imagen: '23.png', categoria: "Químicos" },
