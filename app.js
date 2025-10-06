@@ -10,17 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 3, nombre: "Desoxidante", desc: "Marca EOX. Producto de uso multiple que desprende de manera rapida el oxido fuertemente adherido.", precio: 4300, imagen: '22.png', categoria: "Quimicos" },
         { id: 4, nombre: "Solvente Dielectrico 40NC 5L", desc: "Marca EOX. producto que remueve grasas, aceites y suciedades pesadas sin dejar residuos y con una rápida tasa de secado. Está formulado en base a solventes libres de cloro flúor carbono (CFC) con el propósito de proteger el medio ambiente.", precio: 32450, imagen: '23.png', categoria: "Químicos" },
         { id: 5, nombre: "Limpiador de manos", desc: "Marca EOX.  elimina facilmente aceites, grasas y suciedades pesadas de las manos.", precio: 6400, imagen: '24.png', categoria: "Quimicos" },
-        { id: 3, nombre: "Pad negro", desc: "Disco abrasivo 17 pulg", precio: 6400, imagen: '31.png', categoria: "Quimicos" },
-        { id: 4, nombre: "Pad blanco", desc: "Disco Pulidor 17 pulg", precio: 6400, imagen: '32.png', categoria: "Químicos" },
-        { id: 5, nombre: "Pad rojo", desc: "Disco abrillantador 17 pulg", precio: 6400, imagen: '30.png', categoria: "Quimicos" },
-        { id: 6, nombre: "Mascarillas Techdent 3 pliegues", desc: "Caja de 50 unidades.", precio: 1980, imagen: '9.png', categoria: "Desechables" },
-        { id: 7, nombre: "Cubre Calzado", desc: "Paquete de 50 unidades.", precio: 2750, imagen: '3.png', categoria: "Desechables" },
-        { id: 8, nombre: "Alcohol Desnaturalizado 1L", desc: "Marca Dilem Pharme.", precio: 4190, imagen: '8.png', categoria: "Químicos" },
-        { id: 9, nombre: "Guantes Industriales Nitrilo Verde", desc: "Marca Adicare, No. 8.", precio: 2650, imagen: '6.png', categoria: "Guantes" },
-        { id: 10, nombre: "Alcohol Isopropílico", desc: "Formato de 1 litro.", precio: 6850, imagen: '2.png', categoria: "Químicos" },
-        { id: 11, nombre: "Guantes de Nitrilo S/P", desc: "Talla M, caja de 100U.", precio: 4690, imagen: '4.png', categoria: "Guantes" },
-        { id: 12, nombre: "Guantes de Vinilo S/P", desc: "Talla M, caja de 100U.", precio: 3790, imagen: '4.png', categoria: "Guantes" },
-        { id: 13, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" }
+        { id: 6, nombre: "Pad negro", desc: "Disco abrasivo 17 pulg", precio: 6400, imagen: '31.png', categoria: "Quimicos" },
+        { id: 7, nombre: "Pad blanco", desc: "Disco Pulidor 17 pulg", precio: 6400, imagen: '32.png', categoria: "Químicos" },
+        { id: 8, nombre: "Pad rojo", desc: "Disco abrillantador 17 pulg", precio: 6400, imagen: '30.png', categoria: "Quimicos" },
+        { id: 9, nombre: "Mascarillas Techdent 3 pliegues", desc: "Caja de 50 unidades.", precio: 1980, imagen: '9.png', categoria: "Desechables" },
+        { id: 10, nombre: "Cubre Calzado", desc: "Paquete de 50 unidades.", precio: 2750, imagen: '3.png', categoria: "Desechables" },
+        { id: 11, nombre: "Alcohol Desnaturalizado 1L", desc: "Marca Dilem Pharme.", precio: 4190, imagen: '8.png', categoria: "Químicos" },
+        { id: 12, nombre: "Guantes Industriales Nitrilo Verde", desc: "Marca Adicare, No. 8.", precio: 2650, imagen: '6.png', categoria: "Guantes" },
+        { id: 13, nombre: "Alcohol Isopropílico", desc: "Formato de 1 litro.", precio: 6850, imagen: '2.png', categoria: "Químicos" },
+        { id: 14, nombre: "Guantes de Nitrilo S/P", desc: "Talla M, caja de 100U.", precio: 4690, imagen: '4.png', categoria: "Guantes" },
+        { id: 15, nombre: "Guantes de Vinilo S/P", desc: "Talla M, caja de 100U.", precio: 3790, imagen: '4.png', categoria: "Guantes" },
+        { id: 16, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" }
     ];
 
     // Productos Químicos sin precio (para consultar)
