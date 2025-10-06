@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 5, nombre: "Limpiador de manos", desc: "Marca EOX.  elimina facilmente aceites, grasas y suciedades pesadas de las manos.", precio: 6400, imagen: '24.png', categoria: "Quimicos" },
         { id: 3, nombre: "Pad negro", desc: "Disco abrasivo", precio: 6500, imagen: '31.jpg', categoria: "Quimicos" },
         { id: 4, nombre: "Pad blanco", desc: "Disco Pulidor", precio: 6500, imagen: '32.jpg', categoria: "Químicos" },
-        { id: 5, nombre: "Pad rojo", desc: "Disco abrillantador", precio: 6400, imagen: '33.png', categoria: "Quimicos" },
+        { id: 5, nombre: "Pad rojo", desc: "Disco abrillantador", precio: 6400, imagen: '30.jpeg', categoria: "Quimicos" },
         { id: 6, nombre: "Mascarillas Techdent 3 pliegues", desc: "Caja de 50 unidades.", precio: 1980, imagen: '9.png', categoria: "Desechables" },
         { id: 7, nombre: "Cubre Calzado", desc: "Paquete de 50 unidades.", precio: 2750, imagen: '3.png', categoria: "Desechables" },
         { id: 8, nombre: "Alcohol Desnaturalizado 1L", desc: "Marca Dilem Pharme.", precio: 4190, imagen: '8.png', categoria: "Químicos" },
