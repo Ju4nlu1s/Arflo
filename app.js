@@ -22,12 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Productos Químicos sin precio (para consultar)
     const productosQuimicosData = [
-        { id: 1, nombre: "Desengrasante de alto poder", desc: "Marca EOX. Solución industrial para grasas pesadas.", precio: 13500, imagen: '20.png', categoria: "Quimicos" },
-        { id: 2, nombre: "Grasa Líquida Adhesiva", desc: "Marca EOX. Agente lubricante universal para piezas que se encuentran bajo alta presion.", precio: 11500, imagen: '21.png', categoria: "Quimicos" },
-        { id: 3, nombre: "Desoxidante", desc: "Marca EOX. Producto de uso multiple que desprende de manera rapida el oxido fuertemente adherido.", precio: 4300, imagen: '22.png', categoria: "Quimicos" },
-        { id: 4, nombre: "Solvente Dielectrico 40NC 5L", desc: "Marca EOX. Limpieza segura para componentes eléctricos. ", precio: 32450, imagen: '23.png', categoria: "Químicos" },
-        { id: 5, nombre: "Limpiador de manos", desc: "Marca EOX.  elimina facilmente aceites, grasas y suciedades pesadas de las manos.", precio: 6400, imagen: '24.png', categoria: "Quimicos" },
-        { id: 11, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" },
         { id: 101, nombre: "Shampoo Automotriz", desc: "Espuma de alta densidad para lavado vehicular.", imagen: '25.png' },
         { id: 102, nombre: "Desengrasante", desc: "Solución industrial para grasas pesadas.", imagen: '26.png' },
         { id: 103, nombre: "Solvente Dieléctrico", desc: "Limpieza segura para componentes eléctricos.", imagen: '26.png' },
