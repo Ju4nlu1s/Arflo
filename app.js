@@ -5,27 +5,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Insumos con precio visible y opción de compra
     const insumosData = [
-        { id: 1, nombre: "Gorro desechable tipo clip", desc: "Paquete de 100 unidades.", precio: 3300, imagen: '7.png', categoria: "Desechables" },
-        { id: 2, nombre: "Mascarillas Techdent 3 pliegues", desc: "Caja de 50 unidades.", precio: 1980, imagen: '9.png', categoria: "Desechables" },
-        { id: 3, nombre: "Cubre Calzado", desc: "Paquete de 50 unidades.", precio: 2750, imagen: '3.png', categoria: "Desechables" },
-        { id: 4, nombre: "Alcohol Desnaturalizado 1L", desc: "Marca Dilem Pharme.", precio: 4190, imagen: '8.png', categoria: "Químicos" },
-        { id: 5, nombre: "Guantes Industriales Nitrilo Verde", desc: "Marca Adicare, No. 8.", precio: 2650, imagen: '6.png', categoria: "Guantes" },
-        { id: 6, nombre: "Alcohol Isopropílico", desc: "Formato de 1 litro.", precio: 6850, imagen: '2.png', categoria: "Químicos" },
-        { id: 7, nombre: "Guantes de Nitrilo S/P", desc: "Talla M, caja de 100U.", precio: 4690, imagen: '4.png', categoria: "Guantes" },
-        { id: 8, nombre: "Guantes de Vinilo S/P", desc: "Talla M, caja de 100U.", precio: 3790, imagen: '4.png', categoria: "Guantes" },
-        { id: 9, nombre: "Toalla Elite Evolution Autocorte", desc: "2 rollos de 250 metros c/u.", precio: 22590, imagen: '5.png', categoria: "Papelería" },
-        { id: 10, nombre: "Toalla Papel Tecnoroll H/S", desc: "2 rollos de 280 metros c/u.", precio: 12590, imagen: '1.png', categoria: "Papelería" },
-        { id: 11, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" }
+        { id: 1, nombre: "Desengrasante de alto poder", desc: "Marca EOX. Solución industrial para grasas pesadas.", precio: 13500, imagen: '20.png', categoria: "Quimicos" },
+        { id: 2, nombre: "Grasa Líquida Adhesiva", desc: "Marca EOX. Agente lubricante universal para piezas que se encuentran bajo alta presion.", precio: 11500, imagen: '21.png', categoria: "Quimicos" },
+        { id: 3, nombre: "Desoxidante", desc: "Marca EOX. Producto de uso multiple que desprende de manera rapida el oxido fuertemente adherido.", precio: 4300, imagen: '22.png', categoria: "Quimicos" },
+        { id: 4, nombre: "Solvente Dielectrico 40NC 5L", desc: "Marca EOX. producto que remueve grasas, aceites y suciedades pesadas sin dejar residuos y con una rápida tasa de secado. Está formulado en base a solventes libres de cloro flúor carbono (CFC) con el propósito de proteger el medio ambiente.", precio: 32450, imagen: '23.png', categoria: "Químicos" },
+        { id: 5, nombre: "Limpiador de manos", desc: "Marca EOX.  elimina facilmente aceites, grasas y suciedades pesadas de las manos.", precio: 6400, imagen: '24.png', categoria: "Quimicos" },
+        { id: 6, nombre: "Mascarillas Techdent 3 pliegues", desc: "Caja de 50 unidades.", precio: 1980, imagen: '9.png', categoria: "Desechables" },
+        { id: 7, nombre: "Cubre Calzado", desc: "Paquete de 50 unidades.", precio: 2750, imagen: '3.png', categoria: "Desechables" },
+        { id: 8, nombre: "Alcohol Desnaturalizado 1L", desc: "Marca Dilem Pharme.", precio: 4190, imagen: '8.png', categoria: "Químicos" },
+        { id: 9, nombre: "Guantes Industriales Nitrilo Verde", desc: "Marca Adicare, No. 8.", precio: 2650, imagen: '6.png', categoria: "Guantes" },
+        { id: 10, nombre: "Alcohol Isopropílico", desc: "Formato de 1 litro.", precio: 6850, imagen: '2.png', categoria: "Químicos" },
+        { id: 11, nombre: "Guantes de Nitrilo S/P", desc: "Talla M, caja de 100U.", precio: 4690, imagen: '4.png', categoria: "Guantes" },
+        { id: 12, nombre: "Guantes de Vinilo S/P", desc: "Talla M, caja de 100U.", precio: 3790, imagen: '4.png', categoria: "Guantes" },
+        { id: 13, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" }
     ];
 
     // Productos Químicos sin precio (para consultar)
     const productosQuimicosData = [
-        { id: 101, nombre: "Shampoo Automotriz", desc: "Espuma de alta densidad para lavado vehicular.", imagen: '12.png' },
-        { id: 102, nombre: "Limpiador de Motor", desc: "Engine cleaner con gatillo, alta eficacia.", imagen: '11.png' },
-        { id: 103, nombre: "Desengrasante", desc: "Solución industrial para grasas pesadas.", imagen: '10.png' },
-        { id: 104, nombre: "Solvente Dieléctrico", desc: "Limpieza segura para componentes eléctricos.", imagen: '10.png' },
-        { id: 105, nombre: "Desoxidante Spray", desc: "Protección y eliminación de óxido en metales.", imagen: '13.png' },
-        { id: 106, nombre: "Limpiador Multipropósito", desc: "Fórmula versátil para diversas superficies.", imagen: '11.png' },
+        { id: 1, nombre: "Desengrasante de alto poder", desc: "Marca EOX. Solución industrial para grasas pesadas.", precio: 13500, imagen: '20.png', categoria: "Quimicos" },
+        { id: 2, nombre: "Grasa Líquida Adhesiva", desc: "Marca EOX. Agente lubricante universal para piezas que se encuentran bajo alta presion.", precio: 11500, imagen: '21.png', categoria: "Quimicos" },
+        { id: 3, nombre: "Desoxidante", desc: "Marca EOX. Producto de uso multiple que desprende de manera rapida el oxido fuertemente adherido.", precio: 4300, imagen: '22.png', categoria: "Quimicos" },
+        { id: 4, nombre: "Solvente Dielectrico 40NC 5L", desc: "Marca EOX. Limpieza segura para componentes eléctricos. ", precio: 32450, imagen: '23.png', categoria: "Químicos" },
+        { id: 5, nombre: "Limpiador de manos", desc: "Marca EOX.  elimina facilmente aceites, grasas y suciedades pesadas de las manos.", precio: 6400, imagen: '24.png', categoria: "Quimicos" },
+        { id: 11, nombre: "Virutilla liquida", desc: "Formato 1 litro", precio: 4250, imagen: '14.png', categoria: "Quimicos" },
+        { id: 101, nombre: "Shampoo Automotriz", desc: "Espuma de alta densidad para lavado vehicular.", imagen: '25.png' },
+        { id: 102, nombre: "Desengrasante", desc: "Solución industrial para grasas pesadas.", imagen: '26.png' },
+        { id: 103, nombre: "Solvente Dieléctrico", desc: "Limpieza segura para componentes eléctricos.", imagen: '26.png' },
+        { id: 104, nombre: "Desengrasante Ecologico", desc: "Limpiador a base de agua.", imagen: '25.png' },
+        { id: 105, nombre: "Antiespumante Industrial", desc: "Disenado para eliminar la espuma en la etapa quimica del tratamiento de RILES tanto organicos como inorganicos", imagen: '25.png' },
     ];
 
     // Equipos sin precio (para consultar)
