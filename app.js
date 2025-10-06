@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Productos Químicos sin precio (para consultar)
     const productosQuimicosData = [
+        { id: 100, nombre: "Toallas de papel", desc: "Todo tipo y formato de papel", imagen: '50.png' },
         { id: 101, nombre: "Shampoo Automotriz", desc: "Espuma de alta densidad para lavado vehicular.", imagen: '25.png' },
         { id: 102, nombre: "Desengrasante", desc: "Solución industrial para grasas pesadas.", imagen: '26.png' },
         { id: 103, nombre: "Solvente Dieléctrico", desc: "Limpieza segura para componentes eléctricos.", imagen: '26.png' },
