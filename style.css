@@ -12,7 +12,10 @@
     --color-success: rgba(22, 163, 74, 1);         /* Verde para notificaciones */
 
     /* Tipografía */
-    --font-family-base: "Helvetica Neue", Arial, sans-serif;
+    
+    /* Tipografía Nueva */
+    --font-family-base: 'Inter', sans-serif;
+    --font-family-headings: 'Montserrat', sans-serif; /* Nueva variable para títulos */
     --font-size-base: 16px;
     --line-height-base: 1.6;
 
