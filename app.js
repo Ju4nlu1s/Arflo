@@ -3,13 +3,13 @@ import { getFirestore, collection, getDocs } from "https://www.gstatic.com/fireb
 
 // --- 1. PEGA AQUÍ TU FIREBASE CONFIG (La misma del admin.html) ---
 const firebaseConfig = {
-      apiKey: "AIzaSyBMgEp-m0Zgxhlo11QaTEFpm7rbvmlESGE",
-      authDomain: "arflo-17aec.firebaseapp.com",
-      projectId: "arflo-17aec",
-      storageBucket: "arflo-17aec.firebasestorage.app",
-      messagingSenderId: "555836490681",
-      appId: "1:555836490681:web:2125b1eefc9129e196ac68",
-      measurementId: "G-Y4FMNS8VBJ"
+  apiKey: "AIzaSyBMgEp-m0Zgxhlo11QaTEFpm7rbvmlESGE",
+  authDomain: "arflo-17aec.firebaseapp.com",
+  projectId: "arflo-17aec",
+  storageBucket: "arflo-17aec.firebasestorage.app",
+  messagingSenderId: "555836490681",
+  appId: "1:555836490681:web:2125b1eefc9129e196ac68",
+  measurementId: "G-Y4FMNS8VBJ"
 };
 
 const app = initializeApp(firebaseConfig);
