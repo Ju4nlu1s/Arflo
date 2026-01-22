@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin ARFLO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container { max-width: 800px; margin: 50px auto; padding: 20px; }
+        .login-screen { text-align: center; margin-top: 100px; }
+        .dashboard { display: none; } /* Oculto por defecto */
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;}
+        .product-list-item { border-bottom: 1px solid #ccc; padding: 10px; display: flex; justify-content: space-between; align-items: center;}
+        img.preview { height: 50px; }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen" class="login-screen">
+        <h2>Acceso Administrativo</h2>
+        <input type="email" id="email" placeholder="Email" style="padding: 10px;">
+        <input type="password" id="password" placeholder="Contraseña" style="padding: 10px;">
+        <button onclick="login()" class="btn btn--primary">Ingresar</button>
+    </div>
+
+    <div id="dashboard" class="dashboard container">
+        <h2>Gestión de Inventario</h2>
+        <button onclick="logout()" class="btn btn--outline">Cerrar Sesión</button>
+        <hr>
+        
+        <h3>Agregar / Editar Producto</h3>
+        <form id="product-form">
+            <input type="hidden" id="doc-id"> <div class="form-grid">
+                <input type="text" id="nombre" placeholder="Nombre Producto" required class="form-control">
+                <input type="number" id="precio" placeholder="Precio (CLP)" required class="form-control">
+                <input type="text" id="desc" placeholder="Descripción" class="form-control">
+                <input type="text" id="categoria" placeholder="Categoría (Ej: Quimicos)" class="form-control">
+                <input type="number" id="stock" placeholder="Stock Disponible" required class="form-control">
+                <input type="text" id="paymentLink" placeholder="Link de Pago (Stripe/Flow)" class="form-control">
+            </div>
+            <label>Imagen del producto:</label>
+            <input type="file" id="image-file" class="form-control">
+            <br><br>
+            <button type="submit" class="btn btn--primary" id="save-btn">Guardar Producto</button>
+            <button type="button" onclick="resetForm()" class="btn btn--outline">Cancelar</button>
+        </form>
+
+        <h3>Inventario Actual</h3>
+        <div id="product-list">
+            </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc, updateDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+        // --- 1. PEGA TU CONFIGURACIÓN DE FIREBASE AQUÍ ---
+        const firebaseConfig = {
+            apiKey: "AIzaSyBMgEp-m0Zgxhlo11QaTEFpm7rbvmlESGE",
+            authDomain: "arflo-17aec.firebaseapp.com",
+            projectId: "arflo-17aec",
+            storageBucket: "arflo-17aec.firebasestorage.app",
+            messagingSenderId: "555836490681",
+            appId: "1:555836490681:web:2125b1eefc9129e196ac68",
+            measurementId: "G-Y4FMNS8VBJ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+
+        // --- 2. LÓGICA DE AUTENTICACIÓN ---
+        window.login = () => {
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            signInWithEmailAndPassword(auth, email, pass)
+                .catch(error => alert("Error: " + error.message));
+        };
+
+        window.logout = () => signOut(auth);
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                loadProducts();
+            } else {
+                document.getElementById('login-screen').style.display = 'block';
+                document.getElementById('dashboard').style.display = 'none';
+            }
+        });
+
+        // --- 3. GESTIÓN DE PRODUCTOS ---
+        const form = document.getElementById('product-form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('save-btn');
+            btn.textContent = "Guardando...";
+            btn.disabled = true;
+
+            const docId = document.getElementById('doc-id').value;
+            const file = document.getElementById('image-file').files[0];
+            
+            let imageUrl = null;
+            
+            // Subir imagen si existe
+            if (file) {
+                const storageRef = ref(storage, 'productos/' + file.name);
+                await uploadBytes(storageRef, file);
+                imageUrl = await getDownloadURL(storageRef);
+            }
+
+            const data = {
+                nombre: document.getElementById('nombre').value,
+                precio: Number(document.getElementById('precio').value),
+                desc: document.getElementById('desc').value,
+                categoria: document.getElementById('categoria').value,
+                stock: Number(document.getElementById('stock').value),
+                paymentLink: document.getElementById('paymentLink').value
+            };
+
+            if (imageUrl) data.imagen = imageUrl; // Solo actualizar imagen si se subió una nueva
+
+            try {
+                if (docId) {
+                    // Editar existente
+                    await updateDoc(doc(db, "productos", docId), data);
+                } else {
+                    // Crear nuevo
+                    if(!imageUrl) data.imagen = "images/default.png"; // Imagen por defecto
+                    await addDoc(collection(db, "productos"), data);
+                }
+                resetForm();
+                alert("Producto guardado exitosamente");
+            } catch (e) {
+                alert("Error al guardar: " + e.message);
+            } finally {
+                btn.textContent = "Guardar Producto";
+                btn.disabled = false;
+            }
+        });
+
+        function loadProducts() {
+            const list = document.getElementById('product-list');
+            // Escucha en tiempo real
+            onSnapshot(collection(db, "productos"), (snapshot) => {
+                list.innerHTML = "";
+                snapshot.forEach(doc => {
+                    const p = doc.data();
+                    list.innerHTML += `
+                        <div class="product-list-item">
+                            <div style="display:flex; gap:10px; align-items:center;">
+                                <img src="${p.imagen}" class="preview" onerror="this.src='images/placeholder.png'">
+                                <div>
+                                    <strong>${p.nombre}</strong><br>
+                                    Stock: ${p.stock} | $${p.precio}
+                                </div>
+                            </div>
+                            <div>
+                                <button onclick="window.editProduct('${doc.id}')" class="btn btn--outline" style="padding:5px 10px;">Editar</button>
+                                <button onclick="window.deleteProduct('${doc.id}')" class="btn btn--primary" style="background:red; padding:5px 10px;">X</button>
+                            </div>
+                        </div>`;
+                });
+            });
+        }
+
+        // Funciones globales para acceder desde HTML
+        window.editProduct = async (id) => {
+            // Lógica simplificada: Llenar el formulario con los datos
+            const snapshot = await getDocs(collection(db, "productos")); // En producción usa getDoc(docRef)
+            snapshot.forEach(doc => {
+                if(doc.id === id) {
+                    const p = doc.data();
+                    document.getElementById('doc-id').value = doc.id;
+                    document.getElementById('nombre').value = p.nombre;
+                    document.getElementById('precio').value = p.precio;
+                    document.getElementById('desc').value = p.desc;
+                    document.getElementById('categoria').value = p.categoria;
+                    document.getElementById('stock').value = p.stock;
+                    document.getElementById('paymentLink').value = p.paymentLink || "";
+                    document.getElementById('save-btn').textContent = "Actualizar Producto";
+                }
+            });
+        };
+
+        window.deleteProduct = async (id) => {
+            if(confirm("¿Seguro que deseas eliminar este producto?")) {
+                await deleteDoc(doc(db, "productos", id));
+            }
+        };
+
+        window.resetForm = () => {
+            form.reset();
+            document.getElementById('doc-id').value = "";
+            document.getElementById('save-btn').textContent = "Guardar Producto";
+        };
+    </script>
+</body>
+</html>
