@@ -1,0 +1,160 @@
+:root {
+    --primary: #0097B2;       /* Cyan de la imagen */
+    --accent: #FF69B4;        /* Rosa de la imagen */
+    --dark: #0F172A;          /* Azul oscuro texto */
+    --light: #F0F9FA;         /* Fondo muy suave */
+    --white: #ffffff;
+    --font-heading: 'Fredoka', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--primary); /* Fondo colorido completo */
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor tipo "App" o Tarjeta gigante */
+.main-wrapper {
+    background: var(--light);
+    width: 100%;
+    max-width: 600px; /* Diseño estrecho tipo móvil/app */
+    min-height: 100vh;
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.9rem; }
+.logo { height: 40px; }
+
+.content-container { padding: 20px 30px; flex-grow: 1; }
+
+/* Hero Section */
+.product-hero { text-align: center; margin-bottom: 40px; }
+
+.badge {
+    background: var(--accent);
+    color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    transform: rotate(-2deg);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.subtitle { color: #64748B; font-size: 1.1rem; }
+
+.price-tag {
+    margin-top: 20px;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--dark);
+}
+.currency { font-size: 1.5rem; vertical-align: super; }
+.detail { font-size: 1rem; color: #94A3B8; font-weight: 400; }
+
+/* Grid de Tarjetas */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-3px); border-color: var(--primary); }
+.card .icon { font-size: 2rem; background: #E0F2F1; padding: 10px; border-radius: 50%; }
+
+.card h3 { font-family: var(--font-heading); color: var(--primary); margin-bottom: 2px; }
+.card p { font-weight: 700; margin-bottom: 0; }
+.card small { color: #64748B; }
+
+/* Formulario */
+.order-section {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.order-section h2 {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; font-weight: 700; margin-bottom: 5px; font-size: 0.9rem; }
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+.form-group input:focus { outline: none; border-color: var(--primary); }
+
+.btn-whatsapp {
+    width: 100%;
+    background: #25D366; /* Verde WhatsApp Oficial */
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn-whatsapp:hover { background: #20BA56; }
+.disclaimer { text-align: center; font-size: 0.8rem; color: #94A3B8; margin-top: 10px; }
+
+footer { text-align: center; padding: 20px; color: #94A3B8; font-size: 0.8rem; }
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+    .details-grid { grid-template-columns: repeat(3, 1fr); text-align: center; }
+    .card { flex-direction: column; gap: 5px; }
+}
