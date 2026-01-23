@@ -1,8 +1,8 @@
 :root {
-    --primary: #0097B2;       /* Cyan de la imagen */
-    --accent: #FF69B4;        /* Rosa de la imagen */
-    --dark: #0F172A;          /* Azul oscuro texto */
-    --light: #F0F9FA;         /* Fondo muy suave */
+    --primary: #0097B2;       /* Cyan */
+    --accent: #FF69B4;        /* Rosa */
+    --dark: #0F172A;
+    --light: #F0F9FA;
     --white: #ffffff;
     --font-heading: 'Fredoka', sans-serif;
     --font-body: 'Nunito', sans-serif;
@@ -12,39 +12,75 @@
 
 body {
     font-family: var(--font-body);
-    background-color: var(--primary); /* Fondo colorido completo */
+    background-color: var(--primary);
     color: var(--dark);
     min-height: 100vh;
     display: flex;
     justify-content: center;
 }
 
-/* Contenedor tipo "App" o Tarjeta gigante */
 .main-wrapper {
     background: var(--light);
     width: 100%;
-    max-width: 600px; /* Diseño estrecho tipo móvil/app */
+    max-width: 600px;
     min-height: 100vh;
     box-shadow: 0 0 50px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
 }
 
+/* --- HEADER Y NAVEGACIÓN --- */
 .header {
-    padding: 20px;
+    background: var(--white);
+    padding: 15px 20px 0 20px; /* Sin padding abajo para pegar los tabs */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.back-link { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 0.9rem; }
-.logo { height: 40px; }
+.logo-container { margin-bottom: 15px; }
+.logo { height: 45px; }
 
-.content-container { padding: 20px 30px; flex-grow: 1; }
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: #64748B;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover { background: #f1f5f9; }
+
+.tab-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 151, 178, 0.3);
+}
+
+/* --- CONTENIDO --- */
+.content-container { padding: 30px 25px; flex-grow: 1; }
+
+/* Ocultar pestañas no activas */
+.tab-content { display: none; animation: fadeIn 0.3s ease; }
+.tab-content.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Hero Section */
-.product-hero { text-align: center; margin-bottom: 40px; }
-
+.product-hero { text-align: center; margin-bottom: 30px; }
 .badge {
     background: var(--accent);
     color: white;
@@ -53,108 +89,92 @@ body {
     border-radius: 20px;
     font-weight: 700;
     font-size: 0.8rem;
-    margin-bottom: 15px;
-    transform: rotate(-2deg);
-}
-
-h1 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    color: var(--primary);
-    line-height: 1.1;
     margin-bottom: 10px;
 }
+h1 { font-family: var(--font-heading); font-size: 2.2rem; color: var(--dark); line-height: 1.1; margin-bottom: 10px; }
+.subtitle { color: #64748B; font-size: 1rem; }
+.price-tag { margin-top: 15px; font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary); }
+.currency { font-size: 1.2rem; vertical-align: super; }
+.detail { font-size: 0.9rem; color: #94A3B8; font-weight: 400; }
 
-.subtitle { color: #64748B; font-size: 1.1rem; }
-
-.price-tag {
-    margin-top: 20px;
-    font-family: var(--font-heading);
-    font-size: 3rem;
-    color: var(--dark);
-}
-.currency { font-size: 1.5rem; vertical-align: super; }
-.detail { font-size: 1rem; color: #94A3B8; font-weight: 400; }
-
-/* Grid de Tarjetas */
-.details-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
+/* Grid Detalles Etiquetas */
+.details-grid { display: flex; gap: 10px; margin-bottom: 30px; overflow-x: auto; padding-bottom: 5px; }
 .card {
     background: var(--white);
+    padding: 15px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.card .icon { font-size: 1.5rem; margin-bottom: 5px; }
+.card h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0; }
+.card small { font-size: 0.75rem; color: #94a3b8; display: block; line-height: 1.2; }
+
+/* Grid Cumpleaños */
+.party-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.party-item {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px dashed #e2e8f0;
+}
+.party-icon { font-size: 2rem; margin-bottom: 5px; }
+
+/* Tarjeta Info Listas */
+.info-card {
+    background: #f3e8ff; /* Fondo lila suave */
     padding: 20px;
     border-radius: 15px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 2px solid transparent;
-    transition: transform 0.2s;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #581c87;
 }
 
-.card:hover { transform: translateY(-3px); border-color: var(--primary); }
-.card .icon { font-size: 2rem; background: #E0F2F1; padding: 10px; border-radius: 50%; }
-
-.card h3 { font-family: var(--font-heading); color: var(--primary); margin-bottom: 2px; }
-.card p { font-weight: 700; margin-bottom: 0; }
-.card small { color: #64748B; }
-
-/* Formulario */
+/* Formularios */
 .order-section {
     background: var(--white);
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.05);
 }
-
-.order-section h2 {
-    font-family: var(--font-heading);
-    text-align: center;
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.form-group { margin-bottom: 15px; }
-.form-group label { display: block; font-weight: 700; margin-bottom: 5px; font-size: 0.9rem; }
-.form-group input {
+.order-section h2 { font-family: var(--font-heading); margin-bottom: 15px; color: var(--dark); text-align: center; }
+.form-group { margin-bottom: 12px; }
+.form-group input, .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 2px solid #E2E8F0;
+    border: 1px solid #cbd5e1;
     border-radius: 10px;
     font-family: var(--font-body);
     font-size: 1rem;
-    transition: border 0.2s;
+    outline: none;
 }
-.form-group input:focus { outline: none; border-color: var(--primary); }
+.form-group input:focus { border-color: var(--primary); border-width: 2px; }
 
 .btn-whatsapp {
     width: 100%;
-    background: #25D366; /* Verde WhatsApp Oficial */
+    background: #25D366;
     color: white;
     border: none;
-    padding: 15px;
-    font-size: 1.1rem;
+    padding: 14px;
+    font-size: 1rem;
     font-weight: 700;
     border-radius: 12px;
     cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
+    transition: transform 0.1s;
 }
-.btn-whatsapp:hover { background: #20BA56; }
-.disclaimer { text-align: center; font-size: 0.8rem; color: #94A3B8; margin-top: 10px; }
+.btn-whatsapp:active { transform: scale(0.98); }
 
-footer { text-align: center; padding: 20px; color: #94A3B8; font-size: 0.8rem; }
-
-/* Responsive adjustments */
-@media (min-width: 600px) {
-    .details-grid { grid-template-columns: repeat(3, 1fr); text-align: center; }
-    .card { flex-direction: column; gap: 5px; }
-}
+footer { text-align: center; padding: 20px; color: #cbd5e1; font-size: 0.8rem; margin-top: auto; }
