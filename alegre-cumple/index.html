@@ -18,9 +18,9 @@
             </div>
             
             <nav class="nav-tabs">
-                <button class="tab-btn active" onclick="openTab('etiquetas')">Etiquetas</button>
-                <button class="tab-btn" onclick="openTab('listas')">Listas</button>
-                <button class="tab-btn" onclick="openTab('cumple')">Cumpleaños</button>
+                <button class="tab-btn active" data-tab="etiquetas">Etiquetas</button>
+                <button class="tab-btn" data-tab="listas">Listas</button>
+                <button class="tab-btn" data-tab="cumple">Cumpleaños</button>
             </nav>
         </header>
 
@@ -61,13 +61,13 @@
                 <section class="product-hero">
                     <div class="badge" style="background:#8b5cf6;">Cotizaciones</div>
                     <h1>Listas Escolares</h1>
-                    <p class="subtitle">No te estreses buscando. Envíanos tu lista y nosotros la cotizamos completa.</p>
+                    <p class="subtitle">Cotizamos tu lista completa sin estrés.</p>
                 </section>
 
                 <div class="info-card">
                     <i class="fas fa-camera-retro" style="font-size: 3rem; color: #8b5cf6; margin-bottom:10px;"></i>
                     <h3>¿Cómo funciona?</h3>
-                    <p>Simplemente presiona el botón, envíanos una <strong>foto o PDF</strong> de la lista escolar por WhatsApp y te responderemos con el total.</p>
+                    <p>Completa tus datos y envíanos una <strong>foto o PDF</strong> de la lista por WhatsApp.</p>
                 </div>
 
                 <section class="order-section">
@@ -77,11 +77,11 @@
                             <input type="text" id="parentNameList" placeholder="Ej: María González" required>
                         </div>
                         <div class="form-group">
-                            <label>Colegio (Opcional)</label>
+                            <label>Colegio</label>
                             <input type="text" id="schoolName" placeholder="Ej: San José">
                         </div>
                         <button type="submit" class="btn-whatsapp" style="background:#8b5cf6;">
-                            <i class="fas fa-camera"></i> Enviar Foto de Lista
+                            <i class="fas fa-camera"></i> Enviar Foto
                         </button>
                     </form>
                 </section>
@@ -91,37 +91,25 @@
                 <section class="product-hero">
                     <div class="badge" style="background:#f59e0b;">Fiesta</div>
                     <h1>Cumpleaños</h1>
-                    <p class="subtitle">Todo para celebrar en grande y con estilo.</p>
+                    <p class="subtitle">Todo para celebrar con estilo.</p>
                 </section>
 
                 <div class="party-grid">
-                    <div class="party-item">
-                        <div class="party-icon">🎁</div>
-                        <span>Sorpresas</span>
-                    </div>
-                    <div class="party-item">
-                        <div class="party-icon">🎈</div>
-                        <span>Globos</span>
-                    </div>
-                    <div class="party-item">
-                        <div class="party-icon">🍽️</div>
-                        <span>Vajilla</span>
-                    </div>
-                    <div class="party-item">
-                        <div class="party-icon">🕯️</div>
-                        <span>Velas</span>
-                    </div>
+                    <div class="party-item"><div class="party-icon">🎁</div><span>Sorpresas</span></div>
+                    <div class="party-item"><div class="party-icon">🎈</div><span>Globos</span></div>
+                    <div class="party-item"><div class="party-icon">🍽️</div><span>Vajilla</span></div>
+                    <div class="party-item"><div class="party-icon">🕯️</div><span>Velas</span></div>
                 </div>
 
                 <section class="order-section">
-                    <h3>¿Qué necesitas para la fiesta?</h3>
-                    <p style="font-size: 0.9rem; color: #64748B; margin-bottom: 15px;">Cuéntanos la temática y qué buscas.</p>
+                    <h3>¿Qué buscas?</h3>
+                    <p style="font-size: 0.9rem; color: #64748B; margin-bottom: 15px;">Cuéntanos la temática y qué necesitas.</p>
                     <form id="form-cumple" class="minimal-form">
                         <div class="form-group">
-                            <textarea id="partyNeeds" rows="3" placeholder="Ej: Necesito cosas de Spiderman para 15 niños..." required style="width:100%; padding:10px; border-radius:10px; border:2px solid #E2E8F0;"></textarea>
+                            <textarea id="partyNeeds" rows="3" placeholder="Ej: Spiderman para 15 niños..." required style="width:100%; padding:10px; border-radius:10px; border:1px solid #cbd5e1;"></textarea>
                         </div>
                         <button type="submit" class="btn-whatsapp" style="background:#f59e0b;">
-                            <i class="fab fa-whatsapp"></i> Cotizar Cumpleaños
+                            <i class="fab fa-whatsapp"></i> Cotizar
                         </button>
                     </form>
                 </section>
