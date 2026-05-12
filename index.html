@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Automatización | Alta Precisión</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tipografía moderna e industrial -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegación Minimalista -->
+    <header class="navbar">
+        <div class="logo">ARFLO<span></span></div>
+        <nav>
+            <a href="#catalogo">Equipos</a>
+            <a href="#soluciones">Soluciones</a>
+            <a href="#" id="open-cart" class="cart-link">Carrito (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Cotización</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart-msg">Tu lista está vacía.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Estimado:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button id="checkout-whatsapp" class="btn btn-primary btn-full">Enviar por WhatsApp</button>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+    <!-- Sección Hero (Estilo Tesla) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Precisión Industrial.</h1>
+            <p>Instrumentación y control avanzado para la industria de hoy.</p>
+            <div class="hero-actions">
+                <a href="#catalogo" class="btn btn-primary">Explorar Catálogo</a>
+                <a href="#contacto" class="btn btn-secondary">Asesoría Técnica</a>
+            </div>
+        </div>
+        <!-- Placeholder para una imagen de fondo de un PLC o equipo de telemetría de alta resolución -->
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Grilla de Catálogo -->
+    <section id="catalogo" class="catalog-section">
+        <div class="catalog-header">
+            <h2>Catálogo de Equipos</h2>
+        </div>
+        <div id="catalogo-contenedor"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

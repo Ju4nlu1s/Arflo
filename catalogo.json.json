@@ -1,0 +1,798 @@
+{
+    "Controladores PLC": [
+        {
+            "nombre": "PLC Delta DVP12SA2(T)",
+            "codigo": "DVP12SA211T",
+            "precio_original": "$183.201",
+            "precio_final": "$219.841"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP28SV(R)",
+            "codigo": "DVP28SV11R2",
+            "precio_original": "$387.556",
+            "precio_final": "$465.067"
+            
+        },
+        {
+            "nombre": "PLC Delta AS228R-A",
+            "codigo": "N/A",
+            "precio_original": "$433.951",
+            "precio_final": "$520.741"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP12SA2(R)",
+            "codigo": "DVP12SA211R",
+            "precio_original": "$183.201",
+            "precio_final": "$219.841"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP20SX(R)",
+            "codigo": "DVP20SX211R",
+            "precio_original": "$332.851",
+            "precio_final": "$399.421"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP14SS2(T)",
+            "codigo": "DVP14SS211T",
+            "precio_original": "$148.666",
+            "precio_final": "$178.399"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP10SX(R)",
+            "codigo": "DVP10SX11R",
+            "precio_original": "$251.941",
+            "precio_final": "$302.329"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP12SE(R)",
+            "codigo": "DVP12SE11R",
+            "precio_original": "$400.277",
+            "precio_final": "$480.332"
+            
+        },
+        {
+            "nombre": "PLC Delta DVP14SS2(R)",
+            "codigo": "DVP14SS211R",
+            "precio_original": "$148.666",
+            "precio_final": "$178.399"
+            
+        },
+        {
+            "nombre": "Kit 1: Cable PLC + Adaptador USB",
+            "codigo": "s: UC-MS030-01A + UT-8801",
+            "precio_original": "$33.915",
+            "precio_final": "$40.698"
+            
+        },
+        {
+            "nombre": "Kit 2: Cable PLC + Conversor USB",
+            "codigo": "s: UC-MS030-01A + UT-882",
+            "precio_original": "$34.510",
+            "precio_final": "$41.412"
+            
+        },
+        {
+            "nombre": "PLC Delta AS228T-A",
+            "codigo": "N/A",
+            "precio_original": "$433.951",
+            "precio_final": "$520.741"
+            
+        },
+        {
+            "nombre": "PLC Delta AS218RX",
+            "codigo": "N/A",
+            "precio_original": "$433.951",
+            "precio_final": "$520.741"
+        }
+    ],
+    "Fuentes de Alimentación": [
+        {
+            "nombre": "Fuente Delta 24Vdc/5A",
+            "codigo": "DRL-24V120W1EN",
+            "precio_original": "$63.269",
+            "precio_final": "$75.922"
+        },
+        {
+            "nombre": "Fuente AMLPULS 24Vdc/5A",
+            "codigo": "AMQR12024N",
+            "precio_original": "$42.072",
+            "precio_final": "$50.486"
+        },
+        {
+            "nombre": "Fuente AMLPULS 24Vdc/2.5A",
+            "codigo": "AMGR06024N",
+            "precio_original": "$28.246",
+            "precio_final": "$33.895"
+        },
+        {
+            "nombre": "Fuente Delta 24Vdc/10A",
+            "codigo": "DRL-24V240W1EN",
+            "precio_original": "$116.921",
+            "precio_final": "$140.305"
+        },
+        {
+            "nombre": "Fuente Delta 24Vdc/3A",
+            "codigo": "DRL-24V75W1AZ",
+            "precio_original": "$48.717",
+            "precio_final": "$58.460"
+        },
+        {
+            "nombre": "Fuente 380Vac",
+            "codigo": "AMTR48024N",
+            "precio_original": "$235.552",
+            "precio_final": "$282.662"
+        },
+        {
+            "nombre": "Fuente AMLPULS 24Vdc/20A",
+            "codigo": "AMQR48024N",
+            "precio_original": "$146.203",
+            "precio_final": "$175.443"
+        },
+        {
+            "nombre": "Fuente AMLPULS 24Vdc/10A",
+            "codigo": "AMQR24024N",
+            "precio_original": "$74.816",
+            "precio_final": "$89.779"
+        }
+    ],
+    "Instrumentación y Sensores": [
+        {
+            "nombre": "Transmisor De Presión C/Display 10bar",
+            "codigo": "MD-S102D",
+            "precio_original": "$125.272",
+            "precio_final": "$150.326"
+        },
+        {
+            "nombre": "Nivel Ultrasónico 5mt",
+            "codigo": "MD-UL-05",
+            "precio_original": "$438.456",
+            "precio_final": "$526.147"
+        },
+        {
+            "nombre": "Transmisor De Presión 10bar",
+            "codigo": "MD-S102",
+            "precio_original": "$86.125",
+            "precio_final": "$103.350"
+        },
+        {
+            "nombre": "Switch Presión 10bar",
+            "codigo": "MD-S853",
+            "precio_original": "$187.909",
+            "precio_final": "$225.490"
+        }
+    ],
+    "Módulos de Expansión": [
+        {
+            "nombre": "Extension Delta 8DO Rele",
+            "codigo": "N/A",
+            "precio_original": "$77.951",
+            "precio_final": "$93.541"
+        },
+        {
+            "nombre": "Extension Delta AS 4AI",
+            "codigo": "N/A",
+            "precio_original": "$198.895",
+            "precio_final": "$238.674"
+        },
+        {
+            "nombre": "Extension Delta AS 4inRTD",
+            "codigo": "N/A",
+            "precio_original": "$230.260",
+            "precio_final": "$276.312"
+        },
+        {
+            "nombre": "Extensión Delta 4AI/2AO",
+            "codigo": "N/A",
+            "precio_original": "$210.986",
+            "precio_final": "$253.183"
+        },
+        {
+            "nombre": "Extension Delta AS 32DI",
+            "codigo": "N/A",
+            "precio_original": "$198.895",
+            "precio_final": "$238.674"
+        },
+        {
+            "nombre": "Extension Delta AS 4AO",
+            "codigo": "N/A",
+            "precio_original": "$268.001",
+            "precio_final": "$321.601"
+        },
+        {
+            "nombre": "Extensión Delta 8DI",
+            "codigo": "N/A",
+            "precio_original": "$52.954",
+            "precio_final": "$63.544"
+        },
+        {
+            "nombre": "Extension Delta AS 8DI/8DO",
+            "codigo": "N/A",
+            "precio_original": "$134.001",
+            "precio_final": "$160.801"
+        },
+        {
+            "nombre": "Extensión Delta 4inRTD",
+            "codigo": "N/A",
+            "precio_original": "$195.698",
+            "precio_final": "$234.837"
+        },
+        {
+            "nombre": "Extensión Delta 8DI/8DO",
+            "codigo": "N/A",
+            "precio_original": "$131.174",
+            "precio_final": "$157.408"
+        },
+        {
+            "nombre": "Extension Delta AS 16DO (Transistor)",
+            "codigo": "N/A",
+            "precio_original": "$161.970",
+            "precio_final": "$194.364"
+        },
+        {
+            "nombre": "Extension Delta AS 32DO (TR)",
+            "codigo": "N/A",
+            "precio_original": "$210.907",
+            "precio_final": "$253.088"
+        },
+        {
+            "nombre": "Extension Delta 8DO TR",
+            "codigo": "N/A",
+            "precio_original": "$77.951",
+            "precio_final": "$93.541"
+        },
+        {
+            "nombre": "Extension Delta AS 16DO (Rele)",
+            "codigo": "N/A",
+            "precio_original": "$151.173",
+            "precio_final": "$181.407"
+        },
+        {
+            "nombre": "Extension Delta AS 4inTC",
+            "codigo": "N/A",
+            "precio_original": "$230.260",
+            "precio_final": "$276.312"
+        },
+        {
+            "nombre": "Extensión Delta 4inT/C",
+            "codigo": "N/A",
+            "precio_original": "$205.237",
+            "precio_final": "$246.284"
+        },
+        {
+            "nombre": "Extensión Delta 4AI",
+            "codigo": "N/A",
+            "precio_original": "$188.133",
+            "precio_final": "$225.759"
+        },
+        {
+            "nombre": "Extensión Delta Ethernet",
+            "codigo": "N/A",
+            "precio_original": "$340.804",
+            "precio_final": "$408.964"
+        },
+        {
+            "nombre": "Extensión Delta 4AO",
+            "codigo": "N/A",
+            "precio_original": "$248.323",
+            "precio_final": "$297.987"
+        },
+        {
+            "nombre": "Extension Delta AS 4AI/2AO",
+            "codigo": "N/A",
+            "precio_original": "$226.434",
+            "precio_final": "$271.720"
+        },
+        {
+            "nombre": "Extension Delta AS 16DI",
+            "codigo": "N/A",
+            "precio_original": "$142.934",
+            "precio_final": "$171.520"
+        }
+    ],
+    "Otros Equipos": [
+        {
+            "nombre": "IoT VBOX WAN",
+            "codigo": "N/A",
+            "precio_original": "$379.498",
+            "precio_final": "$455.397"
+        },
+        {
+            "nombre": "Modbus RTU/TCP Gateway",
+            "codigo": "UT-6801A-GW",
+            "precio_original": "$137.064",
+            "precio_final": "$164.476"
+        },
+        {
+            "nombre": "Conversor USB/RS-485 (UT-885)",
+            "codigo": "UT-885",
+            "precio_original": "$30.746",
+            "precio_final": "$36.895"
+        },
+        {
+            "nombre": "Software SCADA Ilimitados Tag",
+            "codigo": "DIAV-0199K0000A",
+            "precio_original": "$4.087.824",
+            "precio_final": "$4.905.388"
+        },
+        {
+            "nombre": "Software SCADA 64 Tag",
+            "codigo": "DIAV-010640000A",
+            "precio_original": "$493.500",
+            "precio_final": "$592.200"
+        },
+        {
+            "nombre": "Analizador Red Delta DPM-C520",
+            "codigo": "N/A",
+            "precio_original": "$349.563",
+            "precio_final": "$419.475"
+        },
+        {
+            "nombre": "Partidor Suave 60HP (45KW), 90A",
+            "codigo": "ONLINE",
+            "precio_original": "$652.767",
+            "precio_final": "$783.320"
+        },
+        {
+            "nombre": "Switch Delta 8-Port",
+            "codigo": "N/A",
+            "precio_original": "$172.013",
+            "precio_final": "$206.415"
+        },
+        {
+            "nombre": "Software SCADA 512 Tag",
+            "codigo": "DIAV-015120000A",
+            "precio_original": "$2.270.099",
+            "precio_final": "$2.724.118"
+        },
+        {
+            "nombre": "Switch Delta 5-Port",
+            "codigo": "DVS-005I00",
+            "precio_original": "$120.607",
+            "precio_final": "$144.728"
+        },
+        {
+            "nombre": "Partidor Suave 210HP (160KW), 320A",
+            "codigo": "N/A",
+            "precio_original": "$1.326.981",
+            "precio_final": "$1.592.377"
+        },
+        {
+            "nombre": "Partidor Suave 25HP (18.5KW), 37A",
+            "codigo": "N/A",
+            "precio_original": "$467.219",
+            "precio_final": "$560.662"
+        },
+        {
+            "nombre": "Switch Wecon 5-Port",
+            "codigo": "SW05E",
+            "precio_original": "$70.229",
+            "precio_final": "$84.274"
+        },
+        {
+            "nombre": "Tarjeta Delta CANopen",
+            "codigo": "N/A",
+            "precio_original": "$98.473",
+            "precio_final": "$118.167"
+        },
+        {
+            "nombre": "Software SCADA 128 Tag",
+            "codigo": "DIAV-011280000A",
+            "precio_original": "$1.061.024",
+            "precio_final": "$1.273.228"
+        },
+        {
+            "nombre": "Analizador Red Delta DPM-C530E",
+            "codigo": "N/A",
+            "precio_original": "$452.375",
+            "precio_final": "$542.850"
+        },
+        {
+            "nombre": "Conversor USB/RS-232 (UT-8801)",
+            "codigo": "UT-8801",
+            "precio_original": "$22.655",
+            "precio_final": "$27.186"
+        },
+        {
+            "nombre": "Partidor Suave 250HP (185KW), 370A",
+            "codigo": "N/A",
+            "precio_original": "$1.532.301",
+            "precio_final": "$1.838.761"
+        },
+        {
+            "nombre": "Partidor Suave 50HP (37KW), 75A",
+            "codigo": "N/A",
+            "precio_original": "$549.651",
+            "precio_final": "$659.581"
+        },
+        {
+            "nombre": "Rele Interface Slim 220VAC",
+            "codigo": "N/A",
+            "precio_original": "$9.366",
+            "precio_final": "$11.239"
+        },
+        {
+            "nombre": "Partidor Suave 100HP (75KW), 150A",
+            "codigo": "N/A",
+            "precio_original": "$858.089",
+            "precio_final": "$1.029.706"
+        },
+        {
+            "nombre": "Rele Interface Slim 24VDC/AC",
+            "codigo": "N/A",
+            "precio_original": "$6.628",
+            "precio_final": "$7.953"
+        },
+        {
+            "nombre": "Jumper 20pin",
+            "codigo": "N/A",
+            "precio_original": "$1.542",
+            "precio_final": "$1.850"
+        },
+        {
+            "nombre": "Partidor Suave 150HP (110KW), 230A",
+            "codigo": "N/A",
+            "precio_original": "$1.163.484",
+            "precio_final": "$1.396.180"
+        },
+        {
+            "nombre": "Porta Keypad + Cable",
+            "codigo": ": MIC-CAB-KP",
+            "precio_original": "$7.604",
+            "precio_final": "$9.124"
+        },
+        {
+            "nombre": "Partidor Suave 300HP (220KW), 440A",
+            "codigo": "N/A",
+            "precio_original": "$1.668.725",
+            "precio_final": "$2.002.470"
+        },
+        {
+            "nombre": "IoT VBOX 4G/WAN",
+            "codigo": "N/A",
+            "precio_original": "$475.979",
+            "precio_final": "$571.174"
+        },
+        {
+            "nombre": "IoT VBOX WiFi/WAN",
+            "codigo": "N/A",
+            "precio_original": "$439.419",
+            "precio_final": "$527.302"
+        },
+        {
+            "nombre": "Modulo Delta Card Slot",
+            "codigo": "N/A",
+            "precio_original": "$165.280",
+            "precio_final": "$198.336"
+        },
+        {
+            "nombre": "Software SCADA 1000 Tag",
+            "codigo": "DIAV-0101K0000A",
+            "precio_original": "$3.026.798",
+            "precio_final": "$3.632.157"
+        },
+        {
+            "nombre": "Conversor USB/RS-232 (UT-882)",
+            "codigo": "UT-882",
+            "precio_original": "$23.141",
+            "precio_final": "$27.769"
+        },
+        {
+            "nombre": "Partidor Suave 75HP (55KW), 110A",
+            "codigo": "N/A",
+            "precio_original": "$688.052",
+            "precio_final": "$825.662"
+        },
+        {
+            "nombre": "Partidor Suave 40HP (30KW), 60A",
+            "codigo": "N/A",
+            "precio_original": "$517.408",
+            "precio_final": "$620.889"
+        }
+    ],
+    "Pantallas HMI": [
+        {
+            "nombre": "HMI Wecon 10\" PI3102ig-C(AG)",
+            "codigo": "N/A",
+            "precio_original": "$813.983",
+            "precio_final": "$976.779"
+        },
+        {
+            "nombre": "HMI Delta 10\" DOP110WS",
+            "codigo": "N/A",
+            "precio_original": "$997.326",
+            "precio_final": "$1.196.791"
+        },
+        {
+            "nombre": "HMI Delta 7\" DOP107EG",
+            "codigo": "N/A",
+            "precio_original": "$523.949",
+            "precio_final": "$628.738"
+        },
+        {
+            "nombre": "HMI Delta 4.3\" DOP103WQ",
+            "codigo": "N/A",
+            "precio_original": "$358.171",
+            "precio_final": "$429.805"
+        },
+        {
+            "nombre": "HMI Delta 15\" DOP115WX",
+            "codigo": "N/A",
+            "precio_original": "$2.041.040",
+            "precio_final": "$2.449.248"
+        },
+        {
+            "nombre": "HMI Wecon 15\" PI8150ig(AG)",
+            "codigo": "N/A",
+            "precio_original": "$1.388.632",
+            "precio_final": "$1.666.358"
+        },
+        {
+            "nombre": "HMI Wecon 7\" PI3070ig",
+            "codigo": "N/A",
+            "precio_original": "$472.066",
+            "precio_final": "$566.479"
+        },
+        {
+            "nombre": "HMI Wecon 10\" PI3102ig",
+            "codigo": "N/A",
+            "precio_original": "$785.628",
+            "precio_final": "$942.753"
+        },
+        {
+            "nombre": "HMI Wecon 7\" PI3070ig-C(AG)",
+            "codigo": "N/A",
+            "precio_original": "$571.175",
+            "precio_final": "$685.410"
+        },
+        {
+            "nombre": "HMI Delta 10\" DOP110CS",
+            "codigo": "N/A",
+            "precio_original": "$596.191",
+            "precio_final": "$715.429"
+        },
+        {
+            "nombre": "HMI Wecon 4\" PI8043ig",
+            "codigo": "N/A",
+            "precio_original": "$234.310",
+            "precio_final": "$281.172"
+        },
+        {
+            "nombre": "HMI Wecon 10\" PI3102ig-OH",
+            "codigo": "N/A",
+            "precio_original": "$537.535",
+            "precio_final": "$645.042"
+        },
+        {
+            "nombre": "HMI Delta 7\" DOP107BV",
+            "codigo": "N/A",
+            "precio_original": "$374.140",
+            "precio_final": "$448.968"
+        },
+        {
+            "nombre": "HMI Delta 4.3\" DOP103BQ",
+            "codigo": "N/A",
+            "precio_original": "$289.062",
+            "precio_final": "$346.874"
+        },
+        {
+            "nombre": "HMI Wecon 7\" PI3070ig-OH",
+            "codigo": "N/A",
+            "precio_original": "$279.105",
+            "precio_final": "$334.926"
+        }
+    ],
+    "Servomotores": [
+        {
+            "nombre": "Kit Servo Delta 750W",
+            "codigo": "- Servo Driver 220VAC, 750W,  ASD-B3A-0721-M",
+            "precio_original": "$1.039.987",
+            "precio_final": "$1.247.984"
+        },
+        {
+            "nombre": "Kit Servo Wecon 400W",
+            "codigo": "- Servo Driver 220VAC, 400W,  VD2-010SA1G",
+            "precio_original": "$478.957",
+            "precio_final": "$574.748"
+        },
+        {
+            "nombre": "Kit Servo Wecon 750W",
+            "codigo": "- Servo Driver 220VAC, 750W,  VD2-014SA1G",
+            "precio_original": "$527.197",
+            "precio_final": "$632.636"
+        },
+        {
+            "nombre": "Kit Servo Delta 400W",
+            "codigo": "- Servo Driver 220VAC, 400W,  ASD-B3A-0421-M",
+            "precio_original": "$945.084",
+            "precio_final": "$1.134.100"
+        }
+    ],
+    "Variadores de Frecuencia": [
+        {
+            "nombre": "VDF MICNO 30HP - 380VAC",
+            "codigo": "AE300-022G/030P-T4",
+            "precio_original": "$1.140.427",
+            "precio_final": "$1.368.512"
+        },
+        {
+            "nombre": "VDF DELTA 2HP - 380VAC",
+            "codigo": "VFD4A2MS43AFSAA",
+            "precio_original": "$399.948",
+            "precio_final": "$479.937"
+        },
+        {
+            "nombre": "VDF MICNO 2HP - 220VAC",
+            "codigo": "KE300X-1R5G-S2",
+            "precio_original": "$242.735",
+            "precio_final": "$291.282"
+        },
+        {
+            "nombre": "VDF DELTA 20HP - 380VAC",
+            "codigo": "VFD32AMS43AFSAA",
+            "precio_original": "$1.108.278",
+            "precio_final": "$1.329.933"
+        },
+        {
+            "nombre": "VDF MICNO 40HP - 380VAC",
+            "codigo": "AE300-030G/037P-T4",
+            "precio_original": "$1.400.196",
+            "precio_final": "$1.680.235"
+        },
+        {
+            "nombre": "VDF DELTA 30HP - 380VAC",
+            "codigo": "VFD45AMS43AFSAA",
+            "precio_original": "$1.577.691",
+            "precio_final": "$1.893.229"
+        },
+        {
+            "nombre": "VDF MICNO 10HP - 380VAC",
+            "codigo": "AE300-7R5G/011P-T4",
+            "precio_original": "$537.636",
+            "precio_final": "$645.163"
+        },
+        {
+            "nombre": "VDF MICNO 3HP - 220VAC",
+            "codigo": "KE300X-2R2G-S2",
+            "precio_original": "$261.594",
+            "precio_final": "$313.912"
+        },
+        {
+            "nombre": "VDF MICNO 100HP - 380VAC",
+            "codigo": "AE300-075G/090P-T4",
+            "precio_original": "$3.274.181",
+            "precio_final": "$3.929.017"
+        },
+        {
+            "nombre": "VDF MICNO 75HP - 380VAC",
+            "codigo": "AE300-055G/075P-T4",
+            "precio_original": "$2.605.231",
+            "precio_final": "$3.126.277"
+        },
+        {
+            "nombre": "VDF DELTA 15HP - 380VAC",
+            "codigo": "VFD25AMS43AFSAA",
+            "precio_original": "$932.511",
+            "precio_final": "$1.119.013"
+        },
+        {
+            "nombre": "VDF DELTA 7.5HP - 380VAC",
+            "codigo": "VFD13AMS43AFSAA",
+            "precio_original": "$617.552",
+            "precio_final": "$741.062"
+        },
+        {
+            "nombre": "VDF DELTA 3HP - 380VAC",
+            "codigo": "VFD5A5MS43AFSAA",
+            "precio_original": "$415.473",
+            "precio_final": "$498.567"
+        },
+        {
+            "nombre": "VDF MICNO 7.5HP - 380VAC",
+            "codigo": "AE300-5R5G/7R5P-T4",
+            "precio_original": "$395.189",
+            "precio_final": "$474.226"
+        },
+        {
+            "nombre": "VDF DELTA 10HP - 380VAC",
+            "codigo": "VFD17AMS43AFSAA",
+            "precio_original": "$699.383",
+            "precio_final": "$839.259"
+        },
+        {
+            "nombre": "VDF DELTA 1HP - 380VAC",
+            "codigo": "VFD2A7MS43AFSAA",
+            "precio_original": "$386.529",
+            "precio_final": "$463.834"
+        },
+        {
+            "nombre": "VDF MICNO 125HP - 380VAC",
+            "codigo": "AE300-090G/110P-T4",
+            "precio_original": "$4.149.486",
+            "precio_final": "$4.979.383"
+        },
+        {
+            "nombre": "VDF MICNO 60HP - 380VAC",
+            "codigo": "AE300-045G/055P-T4",
+            "precio_original": "$2.468.137",
+            "precio_final": "$2.961.764"
+        },
+        {
+            "nombre": "VDF MICNO 150HP - 380VAC",
+            "codigo": "AE300-110G/132P-T4",
+            "precio_original": "$4.830.422",
+            "precio_final": "$5.796.506"
+        },
+        {
+            "nombre": "VDF MICNO 20HP - 380VAC",
+            "codigo": "AE300-015G/018P-T4",
+            "precio_original": "$819.092",
+            "precio_final": "$982.910"
+        },
+        {
+            "nombre": "VDF DELTA 1HP - 220VAC",
+            "codigo": "VFD4A8MS21AFSAA",
+            "precio_original": "$330.483",
+            "precio_final": "$396.579"
+        },
+        {
+            "nombre": "VDF DELTA 3HP - 220VAC",
+            "codigo": "VFD11AMS21AFSAA",
+            "precio_original": "$423.103",
+            "precio_final": "$507.723"
+        },
+        {
+            "nombre": "VDF MICNO 50HP - 380VAC",
+            "codigo": "AE300-037G/045P-T4",
+            "precio_original": "$1.881.195",
+            "precio_final": "$2.257.434"
+        },
+        {
+            "nombre": "VDF MICNO 2HP - 380VAC",
+            "codigo": "AE300-1R5G/2R2P-T4",
+            "precio_original": "$265.852",
+            "precio_final": "$319.022"
+        },
+        {
+            "nombre": "VDF DELTA 5HP - 380VAC",
+            "codigo": "VFD9A0MS43AFSAA",
+            "precio_original": "$487.832",
+            "precio_final": "$585.398"
+        },
+        {
+            "nombre": "VDF MICNO 1HP - 380VAC",
+            "codigo": "AE300-0R7G/1R5P-T4",
+            "precio_original": "$248.514",
+            "precio_final": "$298.216"
+        },
+        {
+            "nombre": "VDF MICNO 15HP - 380VAC",
+            "codigo": "AE300-011G/015P-T4",
+            "precio_original": "$718.835",
+            "precio_final": "$862.602"
+        },
+        {
+            "nombre": "VDF MICNO 1HP - 220VAC",
+            "codigo": "KE300X-0R7G-S2",
+            "precio_original": "$196.500",
+            "precio_final": "$235.800"
+        },
+        {
+            "nombre": "VDF DELTA 25HP - 380VAC",
+            "codigo": "VFD38AMS43AFSAA",
+            "precio_original": "$1.394.030",
+            "precio_final": "$1.672.836"
+        },
+        {
+            "nombre": "VDF MICNO 5HP - 380VAC",
+            "codigo": "AE300-004G/5R5P-T4",
+            "precio_original": "$351.326",
+            "precio_final": "$421.591"
+        }
+    ]
+}

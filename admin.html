@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARFLO.SYS | Panel de Administración</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+    <aside class="admin-sidebar">
+        <div class="logo">ARFLO<span>.SYS</span> <br><small>ADMIN</small></div>
+        <nav class="admin-nav">
+            <a href="#" class="active">Catálogo</a>
+            <a href="#">Pedidos</a>
+            <a href="#">Ajustes</a>
+            <a href="index.html" class="logout">Volver a la Web</a>
+        </nav>
+    </aside>
+
+    <main class="admin-main">
+        <header class="admin-header">
+            <div>
+                <h1>Gestión de Inventario</h1>
+                <p>Administra los equipos, precios y stock en tiempo real.</p>
+            </div>
+            <button id="btn-nuevo" class="btn btn-primary">+ Nuevo Equipo</button>
+        </header>
+
+        <div class="table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre del Equipo</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="crud-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Añadir Equipo</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <form id="crud-form" class="admin-form">
+                <input type="hidden" id="producto-id">
+                
+                <div class="form-group">
+                    <label>Código (Ref)</label>
+                    <input type="text" id="producto-codigo" required placeholder="Ej: DVP12SA211T">
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre del Equipo</label>
+                    <input type="text" id="producto-nombre" required placeholder="Ej: PLC Delta...">
+                </div>
+
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <select id="producto-categoria" required>
+                        <option value="Controladores PLC">Controladores PLC</option>
+                        <option value="Variadores de Frecuencia">Variadores de Frecuencia</option>
+                        <option value="Instrumentación y Sensores">Instrumentación y Sensores</option>
+                        <option value="Fuentes de Alimentación">Fuentes de Alimentación</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Precio (CLP)</label>
+                        <input type="number" id="producto-precio" required placeholder="Ej: 150000">
+                    </div>
+                    <div class="form-group">
+                        <label>Stock</label>
+                        <input type="number" id="producto-stock" required placeholder="Ej: 5">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>URL de la Imagen</label>
+                    <input type="url" id="producto-imagen" placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" id="cancel-modal" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
