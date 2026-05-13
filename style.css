@@ -76,7 +76,7 @@ main {
 }
 
 /* -------- HERO -------- */
-.hero {
+ {
   min-height: calc(100vh - 64px);
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
@@ -85,7 +85,7 @@ main {
   gap: 4vw;
 }
 
-.hero-content h1 {
+-content h1 {
   font-size: clamp(2.4rem, 3.4vw, 3.6rem);
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -93,7 +93,7 @@ main {
   margin: 0 0 1.5rem;
 }
 
-.hero-content p {
+-content p {
   font-size: 1.05rem;
   line-height: 1.7;
   max-width: 32rem;
@@ -101,7 +101,7 @@ main {
   color: #444444;
 }
 
-.hero-actions {
+-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -146,7 +146,25 @@ main {
   align-items: center;
   justify-content: center;
 }
+/* NUEVA CLASE PARA LA IMAGEN REAL */
+.hero-equipment-img {
+  width: 100%; /* La imagen llenará el ancho de su contenedor hero-image */
+  max-width: 580px; /* Mantener el límite de ancho establecido anteriormente */
+  height: auto; /* Mantener la proporción original */
+  border-radius: 28px; /* Mantener los bordes redondeados */
+  
+  /* Sombra ultra sutil y suave (estilo Stripe) */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06); 
+  
+  /* Opcional: Una sutil animación de entrada para la imagen */
+  animation: fadeInImage 1s ease-out 0.5s both;
+}
 
+/* Animación de entrada sutil para la imagen */
+@keyframes fadeInImage {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
 .hero-image-placeholder {
   width: 100%;
   max-width: 580px;
