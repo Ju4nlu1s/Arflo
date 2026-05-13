@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistemas de Automatización | Alta Precisión</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Tipografía moderna e industrial -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
+<header class="main-header">
+    <div class="logo">ARFLO<span>.SYS</span></div>
+    <nav class="main-nav">
+        <a href="#catalogo">Equipos</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#" id="open-cart">Carrito <span id="cart-count">0</span></a>
+    </nav>
+</header>
 <body>
 
     <!-- Navegación Minimalista -->
@@ -45,28 +45,27 @@
 </body>
 </html>
 
-    <!-- Sección Hero (Estilo Tesla) -->
+<main>
     <section class="hero">
         <div class="hero-content">
             <h1>Precisión Industrial.</h1>
-            <p>Instrumentación y control avanzado para la industria de hoy.</p>
+            <p>Instrumentación y control avanzado para la industria de hoy. Eleva los estándares de tu planta con hardware de última generación.</p>
             <div class="hero-actions">
-                <a href="#catalogo" class="btn btn-primary">Explorar Catálogo</a>
-                <a href="#contacto" class="btn btn-secondary">Asesoría Técnica</a>
+                <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+                <a href="#contacto" class="btn-secondary">Asesoría Técnica</a>
             </div>
         </div>
-        <!-- Placeholder para una imagen de fondo de un PLC o equipo de telemetría de alta resolución -->
-        <div class="hero-background"></div>
+        <div class="hero-image">
+            <div class="hero-image-placeholder">Imagen del Equipo</div>
+        </div>
     </section>
 
-    <!-- Grilla de Catálogo -->
     <section id="catalogo" class="catalog-section">
         <div class="catalog-header">
             <h2>Catálogo de Equipos</h2>
         </div>
         <div id="catalogo-contenedor"></div>
     </section>
-
-    <script src="app.js"></script>
+</main>
 </body>
 </html>
