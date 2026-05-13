@@ -18,41 +18,100 @@ function cargarCatalogo() {
         .then(data => {
             contenedor.innerHTML = '';
             for (const [categoria, productos] of Object.entries(data)) {
+                
+                // NUEVA ESTRUCTURA CON ACORDEÓN
                 let categoryHTML = `
                     <div class="category-block">
-                        <h3 class="category-title">${categoria}</h3>
+                        <div class="category-header-wrap" onclick="toggleCategory(this)">
+                            <h3 class="category-title">${categoria}</h3>
+                            <span class="toggle-icon">▼</span>
+                        </div>
                         <hr class="category-divider">
-                        <div class="product-grid">
+                        
+                        <div class="category-content">
+                            <div class="grid-inner">
+                                <div class="product-grid" style="padding-bottom: 3rem;">
                 `;
 
                 productos.forEach(p => {
-                    // Convertimos el string "$150.326" a número para cálculos (150326)
                     const precioNumerico = parseInt(p.precio_final.replace('$', '').replace(/\./g, ''));
-                    
-                    // Escapamos comillas simples en el nombre para evitar errores en el onclick
                     const nombreSeguro = p.nombre.replace(/'/g, "\\'");
 
                     categoryHTML += `
                         <article class="product-card">
-                            <div class="product-image"><div class="img-placeholder"></div></div>
+                            <div class="product-image">
+                                <div class="product-image-placeholder">IMG</div>
+                            </div>
                             <div class="product-info">
-                                <h3>${p.nombre}</h3>
-                                <p>Ref: ${p.codigo}</p>
-                                <span class="price">${p.precio_final}</span>
-                                <button class="btn-add" onclick="agregarAlCarrito('${p.codigo}', '${nombreSeguro}', ${precioNumerico})">
-                                    Añadir a cotización
+                                <h3 class="product-title">${p.nombre}</h3>
+                                <p class="product-meta">Ref: ${p.codigo}</p>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">${p.precio_final}</span>
+                                <button class="product-cta" onclick="agregarAlCarrito('${p.codigo}', '${nombreSeguro}', ${precioNumerico})">
+                                    Añadir
                                 </button>
                             </div>
                         </article>
                     `;
                 });
-                categoryHTML += `</div></div>`;
+                
+                categoryHTML += `</div></div></div></div>`;
                 contenedor.innerHTML += categoryHTML;
             }
+
+            // Inicializar el buscador después de cargar los productos
+            configurarBuscador();
         })
         .catch(err => console.error('Error cargando catálogo', err));
 }
 
+// --- FUNCIÓN PARA ABRIR/CERRAR ACORDEÓN ---
+function toggleCategory(elemento) {
+    // Encuentra el bloque principal de la categoría y le alterna la clase 'collapsed'
+    const block = elemento.closest('.category-block');
+    block.classList.toggle('collapsed');
+}
+
+// --- LÓGICA DEL BUSCADOR EN TIEMPO REAL ---
+function configurarBuscador() {
+    const searchInput = document.getElementById('search-input');
+    
+    searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase().trim();
+        const categoryBlocks = document.querySelectorAll('.category-block');
+        
+        categoryBlocks.forEach(block => {
+            const products = block.querySelectorAll('.product-card');
+            let hasVisibleProduct = false;
+            
+            products.forEach(card => {
+                const title = card.querySelector('.product-title').innerText.toLowerCase();
+                const ref = card.querySelector('.product-meta').innerText.toLowerCase();
+                
+                // Si el término coincide con el título o la referencia
+                if (title.includes(term) || ref.includes(term)) {
+                    card.style.display = 'flex'; // Volver a mostrar
+                    hasVisibleProduct = true;
+                } else {
+                    card.style.display = 'none'; // Ocultar
+                }
+            });
+            
+            // Si la categoría no tiene productos visibles, oculta la categoría entera
+            if (hasVisibleProduct) {
+                block.style.display = 'block';
+                
+                // Si el usuario está buscando algo, abre automáticamente las categorías
+                if (term !== '') {
+                    block.classList.remove('collapsed');
+                }
+            } else {
+                block.style.display = 'none';
+            }
+        });
+    });
+}
 // --- LÓGICA DEL CARRITO ---
 
 function agregarAlCarrito(codigo, nombre, precio) {
