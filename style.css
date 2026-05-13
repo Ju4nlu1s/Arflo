@@ -500,3 +500,86 @@ main {
     padding: 3.5rem 1.5rem 4rem;
   }
 }
+/* -------- BUSCADOR -------- */
+.search-container {
+  margin-top: 1.5rem;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #111;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #111;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+/* -------- CATEGORÍAS DESPLEGABLES (ACORDEÓN) -------- */
+.category-block {
+  margin-bottom: 2rem; /* Reducido un poco para acomodar el acordeón */
+}
+
+/* El encabezado ahora es clickeable */
+.category-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 0;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.category-header-wrap:hover {
+  opacity: 0.7;
+}
+
+.category-title {
+  margin-bottom: 0; /* Quitamos el margen para alinear con el ícono */
+}
+
+/* Ícono de flecha */
+.toggle-icon {
+  font-size: 0.8rem;
+  color: #111;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Animación de apertura/cierre usando CSS Grid */
+.category-content {
+  display: grid;
+  grid-template-rows: 1fr; /* Abierto por defecto */
+  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.category-content > .grid-inner {
+  overflow: hidden;
+}
+
+/* Clases cuando está colapsado (cerrado) */
+.category-block.collapsed .category-content {
+  grid-template-rows: 0fr;
+}
+
+.category-block.collapsed .toggle-icon {
+  transform: rotate(-180deg);
+}
+
+.category-block.collapsed .category-divider {
+  opacity: 0.3;
+}
