@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-<header class="main-header">
-    <div class="logo">ARFLO<span>.SYS</span></div>
-    <nav class="main-nav">
-        <a href="#catalogo">Equipos</a>
-        <a href="#soluciones">Soluciones</a>
-        <a href="#" id="open-cart">Carrito <span id="cart-count">0</span></a>
-    </nav>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Automatización | Alta Precisión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <!-- Navegación Minimalista -->
-    <header class="navbar">
-        <div class="logo">ARFLO<span></span></div>
-        <nav>
+    <header class="main-header">
+        <div class="logo">ARFLO<span>.SYS</span></div>
+        <nav class="main-nav">
             <a href="#catalogo">Equipos</a>
             <a href="#soluciones">Soluciones</a>
-            <a href="#" id="open-cart" class="cart-link">Carrito (<span id="cart-count">0</span>)</a>
+            <a href="#" id="open-cart">Carrito <span id="cart-count">0</span></a>
         </nav>
     </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Precisión Industrial.</h1>
+                <p>Instrumentación y control avanzado para la industria de hoy. Eleva los estándares de tu planta con hardware de última generación.</p>
+                <div class="hero-actions">
+                    <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
+                    <a href="#contacto" class="btn-secondary">Asesoría Técnica</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">Imagen del Equipo</div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalog-section">
+            <div class="catalog-header">
+                <h2>Catálogo de Equipos</h2>
+            </div>
+            <div id="catalogo-contenedor"></div>
+        </section>
+    </main>
 
     <div id="cart-overlay" class="cart-overlay"></div>
 
@@ -37,35 +57,10 @@
                 <span>Total Estimado:</span>
                 <span id="cart-total-price">$0</span>
             </div>
-            <button id="checkout-whatsapp" class="btn btn-primary btn-full">Enviar por WhatsApp</button>
+            <button id="checkout-whatsapp" class="btn-whatsapp">Enviar por WhatsApp</button>
         </div>
     </aside>
 
     <script src="app.js"></script>
-</body>
-</html>
-
-<main>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Precisión Industrial.</h1>
-            <p>Instrumentación y control avanzado para la industria de hoy. Eleva los estándares de tu planta con hardware de última generación.</p>
-            <div class="hero-actions">
-                <a href="#catalogo" class="btn-primary">Explorar Catálogo</a>
-                <a href="#contacto" class="btn-secondary">Asesoría Técnica</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="hero-image-placeholder">Imagen del Equipo</div>
-        </div>
-    </section>
-
-    <section id="catalogo" class="catalog-section">
-        <div class="catalog-header">
-            <h2>Catálogo de Equipos</h2>
-        </div>
-        <div id="catalogo-contenedor"></div>
-    </section>
-</main>
 </body>
 </html>
