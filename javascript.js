@@ -1,0 +1,17 @@
+const PHONE='56933803047';
+const KEY='arflo_catalog_v1';
+const initial=window.ARFLO_INITIAL_DATA||{products:[],menus:[]};
+const clone=v=>JSON.parse(JSON.stringify(v));
+const getData=()=>{try{return JSON.parse(localStorage.getItem(KEY))||clone(initial)}catch{return clone(initial)}};
+const saveData=d=>{localStorage.setItem(KEY,JSON.stringify(d));window.dispatchEvent(new Event('arflo-updated'))};
+const money=n=>Number(n)>0?'$'+Number(n).toLocaleString('es-CL'):'Cotizar';
+const wa=(p)=>`https://wa.me/${PHONE}?text=${encodeURIComponent(`Hola ARFLO, quiero cotizar ${p.name} (${p.id}) para entrega en Antofagasta.`)}`;
+function nav(){const d=getData(),box=document.querySelector('[data-nav]');if(!box)return;box.innerHTML=d.menus.map(m=>`<a href="${esc(m.href)}">${esc(m.label)}</a>`).join('')+`<a href="backend.html">Administrar</a>`;const current=location.pathname.split('/').pop()||'index.html';[...box.children].forEach(a=>a.getAttribute('href')===current&&a.classList.add('active'))}
+function esc(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function card(p){return `<article class="product"><div class="product-image"><img loading="lazy" src="${esc(p.image)}" alt="${esc(p.name)}"></div><div class="product-body"><span class="badge">${esc(p.category)}</span><h3>${esc(p.name)}</h3><p>${esc(p.description||p.formats?.join(' · ')||'Producto ARFLO')}</p><div class="price">${money(p.price)}</div><div class="stock">${p.stock>0?`Disponible · ${p.stock} unidades`:'Consultar disponibilidad'}</div><a class="btn btn-whatsapp" target="_blank" rel="noopener" href="${wa(p)}">Cotizar por WhatsApp</a></div></article>`}
+function renderFeatured(){const box=document.querySelector('[data-featured]');if(box)box.innerHTML=getData().products.filter(p=>p.featured&&p.stock!==0).slice(0,8).map(card).join('')}
+function renderProducts(){const box=document.querySelector('[data-products]');if(!box)return;const q=(document.querySelector('#search')?.value||'').toLowerCase(),cat=document.querySelector('#category')?.value||'';const list=getData().products.filter(p=>(!cat||p.category===cat)&&(`${p.name} ${p.description} ${p.id}`.toLowerCase().includes(q)));box.innerHTML=list.length?list.map(card).join(''):'<div class="empty">No encontramos productos con ese filtro.</div>';const count=document.querySelector('[data-count]');if(count)count.textContent=`${list.length} productos`}
+function setupFilters(){const cat=document.querySelector('#category');if(!cat)return;const cats=[...new Set(getData().products.map(p=>p.category))].sort();cat.innerHTML='<option value="">Todas las categorías</option>'+cats.map(c=>`<option>${esc(c)}</option>`).join('');document.querySelector('#search').addEventListener('input',renderProducts);cat.addEventListener('change',renderProducts)}
+function setupContact(){const f=document.querySelector('#contactForm');if(!f)return;f.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(f);const msg=`Hola ARFLO, soy ${d.get('nombre')} de ${d.get('empresa')||'Antofagasta'}. ${d.get('mensaje')}`;window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`,'_blank')})}
+function init(){nav();renderFeatured();setupFilters();renderProducts();setupContact();document.querySelector('.menu-toggle')?.addEventListener('click',()=>document.querySelector('[data-nav]')?.classList.toggle('open'))}
+document.addEventListener('DOMContentLoaded',init);window.addEventListener('arflo-updated',()=>{nav();renderFeatured();renderProducts()});
